@@ -6,4 +6,16 @@
     values-round/strings.xml for round devices.
     -->
     <string name="hello_world">Hello Square World!</string>
+    <string name="android_topics">ANDROID TOPICS</string>
+    <string name="ui">UI</string>
+    <string name="ui_topics">UI topics</string>
+    <string name="ui_topics_view">VIEWS</string>
+    <string name="ui_topics_layout">LAYOUTS</string>
+    <string name="layout_linear">LINEAR LAYOUT</string>
+    <string name="layout_relative">RELATIVE LAYOUT</string>
+    <string name="layout_constraint">CONSTRAINT LAYOUT</string>
+    <string name="layout_frame">FRAME LAYOUT</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="signin">Sign in with</string>
 </resources>

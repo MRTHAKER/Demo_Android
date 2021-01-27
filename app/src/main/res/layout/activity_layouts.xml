@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="ui.layouts.Layouts">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_margin="10dp"
+        android:text="@string/ui_topics_layout"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:minWidth="185dp"
+        android:layout_height="wrap_content">
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_layouts_linear"
+        android:layout_width="match_parent"
+        android:text="@string/layout_linear"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_layouts_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/layout_relative" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_layouts_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/layout_constraint" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_layouts_frame"
+        android:layout_width="match_parent"
+        android:text="@string/layout_frame"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>
