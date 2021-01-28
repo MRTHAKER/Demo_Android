@@ -36,4 +36,13 @@
     <string name="hint_address">Enter address</string>
     <string name="hint_passwd_max_eight">Enter password with max 8 chars</string>
     <string name="default_passwd_count">0/8</string>
+    <string name="cricket">Cricket</string>
+    <string name="basketball">Basketball</string>
+    <string name="Chess">Chess</string>
+    <string name="Volleyball">Volleyball</string>
+    <string name="gender_label_text">Choose Gender</string>
+    <string name="gender_male">Male</string>
+    <string name="gneder_female">Female</string>
+    <string name="label_toggle">Toggle Buttom</string>
+    <string name="label_switch">On/Off</string>
 </resources>
