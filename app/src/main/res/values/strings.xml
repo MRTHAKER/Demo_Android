@@ -15,6 +15,7 @@
     <string name="layout_relative">RELATIVE LAYOUT</string>
     <string name="layout_constraint">CONSTRAINT LAYOUT</string>
     <string name="layout_frame">FRAME LAYOUT</string>
+    <string name="layout_custom">CUSTOM LAYOUT</string>
     <string name="login">Login</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="signin">Sign in with</string>
@@ -45,4 +46,6 @@
     <string name="gneder_female">Female</string>
     <string name="label_toggle">Toggle Buttom</string>
     <string name="label_switch">On/Off</string>
+    <string name="custom_label_email">Email</string>
+    <string name="custom_hint_email">Enter your Email address</string>
 </resources>

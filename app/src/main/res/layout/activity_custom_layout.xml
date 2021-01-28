@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="ui.layouts.customLayout">
+
+    <ui.layouts.CustomInflater
+        app:label="@string/custom_label_email"
+        android:hint="@string/custom_hint_email"
+        app:rightImage="@drawable/baseline_done_black_48"
+        app:wrongImage="@drawable/baseline_clear_black_48"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

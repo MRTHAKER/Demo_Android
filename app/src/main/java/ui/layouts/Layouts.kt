@@ -12,6 +12,7 @@ class Layouts : AppCompatActivity(),View.OnClickListener {
     lateinit var btnRealtive:MaterialButton
     lateinit var btnConstraint:MaterialButton
     lateinit var btnFrame:MaterialButton
+    lateinit var btnCustom:MaterialButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_layouts)
@@ -19,10 +20,12 @@ class Layouts : AppCompatActivity(),View.OnClickListener {
         btnRealtive=findViewById(R.id.btn_layouts_relative)
         btnConstraint=findViewById(R.id.btn_layouts_constraint)
         btnFrame=findViewById(R.id.btn_layouts_frame)
+        btnCustom=findViewById(R.id.btn_layouts_custom)
         btnFrame.setOnClickListener(this)
         btnLinear.setOnClickListener(this)
         btnRealtive.setOnClickListener(this)
         btnConstraint.setOnClickListener(this)
+        btnCustom.setOnClickListener(this)
 
     }
 
@@ -39,6 +42,9 @@ class Layouts : AppCompatActivity(),View.OnClickListener {
             }
             btnFrame->{
                 startActivity(Intent(this,FrameLayout::class.java))
+            }
+            btnCustom->{
+                startActivity(Intent(this,customLayout::class.java))
             }
         }
     }
