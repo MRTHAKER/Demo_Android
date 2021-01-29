@@ -5,11 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.google.android.material.button.MaterialButton
-import ui.drawable.DrawableMenu
-import ui.layouts.Layouts
-import ui.views.Views
+import com.yudiz.demo.ui.drawable.DrawableMenuActivity
+import com.yudiz.demo.ui.layouts.LayoutsActivity
+import com.yudiz.demo.ui.views.ViewsActivity
 
-class UiTopics : AppCompatActivity(),View.OnClickListener {
+class UiTopicsActivity : AppCompatActivity(),View.OnClickListener {
     lateinit var btnViews:MaterialButton
     lateinit var btnLayouts:MaterialButton
     lateinit var btnDrawable:MaterialButton
@@ -27,13 +27,13 @@ class UiTopics : AppCompatActivity(),View.OnClickListener {
     override fun onClick(v: View?) {
         when(v) {
             btnViews ->{
-                startActivity(Intent(this, Views::class.java))
+                startActivity(Intent(this, ViewsActivity::class.java))
             }
             btnLayouts->{
-                startActivity(Intent(this, Layouts::class.java))
+                startActivity(Intent(this, LayoutsActivity::class.java))
             }
             btnDrawable->{
-                startActivity(Intent(this, DrawableMenu::class.java))
+                startActivity(Intent(this, DrawableMenuActivity::class.java))
             }
         }
     }

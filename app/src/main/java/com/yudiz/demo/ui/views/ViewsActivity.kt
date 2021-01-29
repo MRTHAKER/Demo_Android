@@ -1,4 +1,4 @@
-package ui.views
+package com.yudiz.demo.ui.views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +7,7 @@ import android.view.View
 import com.google.android.material.button.MaterialButton
 import com.yudiz.demo.R
 
-class Views : AppCompatActivity(),View.OnClickListener {
+class ViewsActivity : AppCompatActivity(),View.OnClickListener {
     lateinit var btnTextview: MaterialButton
     lateinit var btnEditText: MaterialButton
     lateinit var btnCheckBox: MaterialButton
@@ -37,25 +37,25 @@ class Views : AppCompatActivity(),View.OnClickListener {
     override fun onClick(v: View?) {
         when(v){
             btnTextview->{
-            startActivity(Intent(this,Textview::class.java))
+            startActivity(Intent(this, TextviewActivity::class.java))
             }
             btnEditText->{
-                startActivity(Intent(this,EditText::class.java))
+                startActivity(Intent(this, EditTextActivity::class.java))
             }
             btnCheckBox->{
-                startActivity(Intent(this,CheckBox::class.java))
+                startActivity(Intent(this, CheckBoxActivity::class.java))
             }
             btnRadioButton->{
-                startActivity(Intent(this,RadioButton::class.java))
+                startActivity(Intent(this, RadioButtonActivity::class.java))
             }
             btnToggleButton->{
-                startActivity(Intent(this,ToggleButton::class.java))
+                startActivity(Intent(this, ToggleButtonActivity::class.java))
             }
             btnSwitch->{
-                startActivity(Intent(this,Switch::class.java))
+                startActivity(Intent(this, SwitchActivity::class.java))
             }
             btnImageView->{
-                startActivity(Intent(this,ImageView::class.java))
+                startActivity(Intent(this, ImageViewActivity::class.java))
         }
 
         }

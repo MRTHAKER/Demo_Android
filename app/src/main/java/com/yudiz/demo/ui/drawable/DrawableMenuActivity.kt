@@ -1,4 +1,4 @@
-package ui.drawable
+package com.yudiz.demo.ui.drawable
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +7,7 @@ import android.view.View
 import com.google.android.material.button.MaterialButton
 import com.yudiz.demo.R
 
-class DrawableMenu : AppCompatActivity(),View.OnClickListener {
+class DrawableMenuActivity : AppCompatActivity(),View.OnClickListener {
     lateinit var btnDrawable:MaterialButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +19,7 @@ class DrawableMenu : AppCompatActivity(),View.OnClickListener {
     override fun onClick(v: View?) {
         when(v){
             btnDrawable->{
-                startActivity(Intent(this,DrawableBasic::class.java))
+                startActivity(Intent(this, DrawableBasicActivity::class.java))
             }
         }
     }

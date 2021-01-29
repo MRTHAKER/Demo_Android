@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="ui.views.Textview">
+    tools:context=".ui.views.TextviewActivity">
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"

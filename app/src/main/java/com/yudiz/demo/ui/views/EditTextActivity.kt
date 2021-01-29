@@ -1,4 +1,4 @@
-package ui.views
+package com.yudiz.demo.ui.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,7 +9,7 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textview.MaterialTextView
 import com.yudiz.demo.R
 
-class EditText : AppCompatActivity() {
+class EditTextActivity : AppCompatActivity() {
     lateinit var editText:EditText
     lateinit var textViewCounter:MaterialTextView
     lateinit var editTextPassword:TextInputEditText

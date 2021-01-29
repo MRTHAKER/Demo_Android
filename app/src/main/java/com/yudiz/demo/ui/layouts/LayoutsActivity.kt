@@ -1,4 +1,4 @@
-package ui.layouts
+package com.yudiz.demo.ui.layouts
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +7,7 @@ import android.view.View
 import com.google.android.material.button.MaterialButton
 import com.yudiz.demo.R
 
-class Layouts : AppCompatActivity(),View.OnClickListener {
+class LayoutsActivity : AppCompatActivity(),View.OnClickListener {
     lateinit var btnLinear:MaterialButton
     lateinit var btnRealtive:MaterialButton
     lateinit var btnConstraint:MaterialButton
@@ -32,19 +32,19 @@ class Layouts : AppCompatActivity(),View.OnClickListener {
     override fun onClick(v: View?) {
         when(v){
             btnLinear->{
-                startActivity(Intent(this,LinearLayout::class.java))
+                startActivity(Intent(this, LinearLayoutActivity::class.java))
             }
             btnRealtive->{
-                startActivity(Intent(this,RelativeLayout::class.java))
+                startActivity(Intent(this, RelativeLayoutActivity::class.java))
             }
             btnConstraint->{
-                startActivity(Intent(this,ConstraintLayout::class.java))
+                startActivity(Intent(this, ConstraintLayoutActivity::class.java))
             }
             btnFrame->{
-                startActivity(Intent(this,FrameLayout::class.java))
+                startActivity(Intent(this, FrameLayoutActivity::class.java))
             }
             btnCustom->{
-                startActivity(Intent(this,CustomLayout::class.java))
+                startActivity(Intent(this, CustomLayoutActivity::class.java))
             }
         }
     }

@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ui.layouts.RelativeLayout">
+    tools:context=".ui.layouts.RelativeLayoutActivity">
 
     <Button
         android:id="@+id/btn_center"
+        android:layout_alignParentEnd="false"
         android:layout_width="167dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true" />
@@ -15,22 +16,24 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/btn_center"
         android:layout_above="@+id/btn_center" />
 
     <Button
+        android:layout_toStartOf="@id/btn_center"
         android:layout_below="@id/btn_center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <Button
-        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/btn_center"
         android:layout_width="wrap_content"
         android:layout_above="@id/btn_center"
         android:layout_height="wrap_content"/>
 
     <Button
+        android:layout_toEndOf="@id/btn_center"
         android:layout_below="@id/btn_center"
-        android:layout_alignParentEnd="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 </RelativeLayout>

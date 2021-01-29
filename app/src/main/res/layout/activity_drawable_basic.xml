@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ui.drawable.DrawableBasic">
+    tools:context=".ui.drawable.DrawableBasicActivity">
 <ImageView
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    android:src="@drawable/baseline_theaters_black_48"
+    android:src="@drawable/ic_theaters_black_48"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

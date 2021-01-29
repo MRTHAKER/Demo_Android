@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import com.google.android.material.button.MaterialButton
 
 class MainActivity : AppCompatActivity(),View.OnClickListener {
@@ -18,7 +17,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
 
     override fun onClick(v: View?) {
         if(v==btn_ui){
-            startActivity(Intent(this,UiTopics::class.java))
+            startActivity(Intent(this,UiTopicsActivity::class.java))
         }
     }
 }

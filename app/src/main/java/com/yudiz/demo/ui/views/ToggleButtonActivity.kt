@@ -1,23 +1,23 @@
-package ui.views
+package com.yudiz.demo.ui.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.CompoundButton
 import android.widget.Toast
-import android.widget.ToggleButton
-import com.yudiz.demo.R
+import com.yudiz.demo.databinding.ActivityToggleButtonBinding
 
-class ToggleButton : AppCompatActivity(),CompoundButton.OnCheckedChangeListener {
-    lateinit var btnToggle:ToggleButton
+
+class ToggleButtonActivity : AppCompatActivity(),CompoundButton.OnCheckedChangeListener {
+    lateinit var binding: ActivityToggleButtonBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_toggle_button)
-        btnToggle=findViewById(R.id.btn_toggle)
-        btnToggle.setOnCheckedChangeListener(this)
+        binding =ActivityToggleButtonBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.btnToggle.setOnCheckedChangeListener(this)
     }
 
     override fun onCheckedChanged(buttonView: CompoundButton?, isChecked: Boolean) {
-        if(buttonView==btnToggle){
+        if(buttonView==binding.btnToggle){
             if(isChecked){
                 Toast.makeText(this,"On", Toast.LENGTH_SHORT).show()
             }
@@ -26,4 +26,6 @@ class ToggleButton : AppCompatActivity(),CompoundButton.OnCheckedChangeListener 
             }
         }
     }
+
+
 }

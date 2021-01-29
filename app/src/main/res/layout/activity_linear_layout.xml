@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@color/design_default_color_primary"
-    tools:context="ui.layouts.LinearLayout">
+    tools:context=".ui.layouts.LinearLayoutActivity">
 
     <TextView
         android:text="@string/login"
@@ -18,7 +18,6 @@
         android:layout_height="wrap_content"/>
 
     <EditText
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -32,23 +31,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:background="@color/white"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
+            android:layout_weight="1"
             android:layout_marginEnd="10dp"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="10dp"
             android:background="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <Button
+            android:layout_weight="2"
             android:layout_marginEnd="10dp"
             android:background="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <Button
-            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/black" />

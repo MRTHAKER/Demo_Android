@@ -1,12 +1,12 @@
-package ui.layouts
+package com.yudiz.demo.ui.drawable
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.yudiz.demo.R
 
-class LinearLayout : AppCompatActivity() {
+class DrawableBasicActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_linear_layout)
+        setContentView(R.layout.activity_drawable_basic)
     }
 }

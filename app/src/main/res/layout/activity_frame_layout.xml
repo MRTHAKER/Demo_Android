@@ -4,34 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/design_default_color_primary_dark"
-    tools:context="ui.layouts.FrameLayout">
+    android:background="@color/design_default_color_primary"
+    tools:context=".ui.layouts.FrameLayoutActivity">
 
     <Button
-        android:background="@color/design_default_color_primary" 
-        android:layout_width="match_parent" 
+        android:backgroundTint="@color/design_default_color_primary"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-    
+
     <Button 
-        android:background="@color/black"
+        android:backgroundTint="@color/black"
         android:layout_width="match_parent"
         android:layout_height="match_parent" 
         android:layout_marginTop="200dp"
         android:layout_marginStart="50dp"/>
     
-    <Button android:background="@color/cardview_dark_background"
+    <Button android:backgroundTint="@color/cardview_dark_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent" 
         android:layout_marginTop="300dp" 
         android:layout_marginStart="100dp"/>
     
-    <Button android:background="@color/design_default_color_background"
+    <Button android:backgroundTint="@color/design_default_color_primary_variant"
         android:layout_width="match_parent" 
         android:layout_height="match_parent"
         android:layout_marginTop="400dp"
         android:layout_marginStart="150dp"/>
     
-    <Button android:background="@color/design_default_color_secondary"
+    <Button android:backgroundTint="@color/design_default_color_secondary"
         android:layout_width="match_parent" 
         android:layout_height="match_parent"
         android:layout_marginTop="500dp" 

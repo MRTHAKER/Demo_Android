@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context="ui.views.Switch">
+    tools:context=".ui.views.SwitchActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -13,7 +13,7 @@
         android:text="@string/label_switch"
         android:textColor="@color/black"/>
 
-    <Switch
+    <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/btn_switch"
         android:layout_marginStart="5dp"
         android:layout_width="wrap_content"

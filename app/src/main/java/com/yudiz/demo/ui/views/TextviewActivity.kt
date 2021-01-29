@@ -1,4 +1,4 @@
-package ui.views
+package com.yudiz.demo.ui.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,7 +7,7 @@ import com.yudiz.demo.R
 import android.view.View
 import com.google.android.material.textview.MaterialTextView
 
-class Textview : AppCompatActivity() , View.OnClickListener  {
+class TextviewActivity : AppCompatActivity() , View.OnClickListener  {
     lateinit var btnCounter : MaterialButton
     var count=0
     private lateinit var txtViewCounter: MaterialTextView

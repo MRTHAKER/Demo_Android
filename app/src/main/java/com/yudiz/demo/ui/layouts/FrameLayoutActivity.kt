@@ -1,12 +1,12 @@
-package ui.views
+package com.yudiz.demo.ui.layouts
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.yudiz.demo.R
 
-class Button : AppCompatActivity() {
+class FrameLayoutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_button)
+        setContentView(R.layout.activity_frame_layout)
     }
 }
