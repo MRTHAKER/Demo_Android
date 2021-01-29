@@ -11,6 +11,7 @@
     <string name="ui_topics">UI topics</string>
     <string name="ui_topics_view">VIEWS</string>
     <string name="ui_topics_layout">LAYOUTS</string>
+    <string name="ui_topics_drawable">DRAWABLE</string>
     <string name="layout_linear">LINEAR LAYOUT</string>
     <string name="layout_relative">RELATIVE LAYOUT</string>
     <string name="layout_constraint">CONSTRAINT LAYOUT</string>

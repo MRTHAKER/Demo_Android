@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Demo">
-        <activity android:name="ui.layouts.customLayout"></activity>
+        <activity android:name="ui.drawable.DrawableBasic"/>
+        <activity android:name="ui.drawable.DrawableMenu" />
+        <activity android:name="ui.layouts.CustomLayout" />
         <activity android:name="ui.views.Views" />
         <activity android:name=".UiTopics" />
         <activity android:name="ui.views.ImageView" />

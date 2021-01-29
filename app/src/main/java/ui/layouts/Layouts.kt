@@ -44,7 +44,7 @@ class Layouts : AppCompatActivity(),View.OnClickListener {
                 startActivity(Intent(this,FrameLayout::class.java))
             }
             btnCustom->{
-                startActivity(Intent(this,customLayout::class.java))
+                startActivity(Intent(this,CustomLayout::class.java))
             }
         }
     }

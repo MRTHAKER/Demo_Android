@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context="ui.layouts.customLayout">
+    tools:context="ui.layouts.CustomLayout">
 
     <ui.layouts.CustomInflater
         app:label="@string/custom_label_email"
