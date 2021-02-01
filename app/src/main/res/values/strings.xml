@@ -49,4 +49,13 @@
     <string name="label_switch">On/Off</string>
     <string name="custom_label_email">Email</string>
     <string name="custom_hint_email">Enter your Email address</string>
+    <string name="dmen_login_signin">SIGN IN</string>
+    <string name="dmen_signin_message">Please enter following details to continue with app.</string>
+    <string name="keep_me_signed_in">keep me signed in</string>
+    <string name="don_t_have_account_signup">Don\'t have account?Signup</string>
+    <string name="or">OR</string>
+    <string name="sign_in_with">Sign in with</string>
+    <string name="dimen">DIMEN</string>
+    <string name="login_with_dimen">LOGIN WITH DIMEN</string>
+    <string name="multi_screen">MULTI SCREEN</string>
 </resources>

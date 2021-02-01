@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Demo">
-        <activity android:name=".ui.drawable.DrawableBasicActivity"/>
+        <activity android:name=".ui.dimen.DimenActivity"></activity>
+        <activity android:name=".ui.dimen.MultiScreenActivity" />
+        <activity android:name=".ui.dimen.LoginActivity" />
+        <activity android:name=".ui.drawable.DrawableBasicActivity" />
         <activity android:name=".ui.drawable.DrawableMenuActivity" />
         <activity android:name=".ui.layouts.CustomLayoutActivity" />
         <activity android:name=".ui.views.ViewsActivity" />
