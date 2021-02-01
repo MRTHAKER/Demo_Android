@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:fillViewport="true"
+    android:fillViewport="true"
     android:layout_height="match_parent"
     android:layout_width="match_parent">
 
@@ -15,7 +15,7 @@
 <com.google.android.material.textview.MaterialTextView
     android:id="@+id/tv_signin"
     app:layout_constraintEnd_toEndOf="parent"
-    android:textColor="@color/black"
+    android:textColor="@color/design_default_color_secondary"
     android:layout_margin="@dimen/_10sdp"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
@@ -99,10 +99,10 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/dimen_btn_signin"
         app:layout_constraintTop_toBottomOf="@id/dmen_text_input_password"
-        android:layout_marginTop="@dimen/_50sdp"
         android:text="@string/dmen_login_signin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dimen_tv_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <com.google.android.material.textview.MaterialTextView
@@ -112,7 +112,7 @@
         app:layout_constraintTop_toBottomOf="@id/dimen_btn_signin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/dimen_tv_or"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <com.google.android.material.textview.MaterialTextView
@@ -122,7 +122,7 @@
         app:layout_constraintTop_toBottomOf="@id/dimen_tv_signup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/dimen_tv_signin_with"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -133,38 +133,38 @@
         app:layout_constraintTop_toBottomOf="@id/dimen_tv_or"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/dimen_img_twitter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
     <ImageView
         android:id="@+id/dimen_img_twitter"
         android:layout_height="@dimen/_50sdp"
         android:layout_width="@dimen/_50sdp"
         app:layout_constraintTop_toBottomOf="@id/dimen_tv_signin_with"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias=".20"
+        app:layout_constraintEnd_toStartOf="@id/dimen_img_google"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:src="@drawable/ic_twitter" />
+
     <ImageView
         android:id="@+id/dimen_img_google"
         android:layout_height="@dimen/_50sdp"
         android:layout_width="@dimen/_50sdp"
         app:layout_constraintTop_toBottomOf="@id/dimen_tv_signin_with"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias=".50"
+        app:layout_constraintEnd_toStartOf="@id/dimen_img_facebook"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dimen_img_twitter"
         android:src="@drawable/ic_twitter" />
+
     <ImageView
         android:id="@+id/dimen_img_facebook"
         android:layout_height="@dimen/_50sdp"
         android:layout_width="@dimen/_50sdp"
         app:layout_constraintTop_toBottomOf="@id/dimen_tv_signin_with"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias=".80"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dimen_img_google"
         android:src="@drawable/ic_twitter" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

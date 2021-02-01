@@ -1,63 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent">
-<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@color/design_default_color_primary"
     tools:context=".ui.dimen.MultiScreenActivity">
 
     <ImageButton
         android:id="@+id/ib_one"
-        android:layout_width="@dimen/_150sdp"
-        android:layout_height="@dimen/_200sdp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:src="@drawable/abc_vector_test"
+        app:layout_constraintBottom_toTopOf="@id/ib_three"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/ib_two"
         app:layout_constraintTop_toTopOf="parent" />
     <ImageButton
         android:id="@+id/ib_two"
-        android:layout_width="@dimen/_150sdp"
-        android:layout_height="@dimen/_200sdp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:src="@drawable/abc_vector_test"
+        app:layout_constraintBottom_toTopOf="@id/ib_four"
         app:layout_constraintStart_toEndOf="@id/ib_one"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <ImageButton
         android:id="@+id/ib_three"
-        android:layout_width="@dimen/_150sdp"
-        android:layout_height="@dimen/_200sdp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:src="@drawable/abc_vector_test"
+        app:layout_constraintBottom_toTopOf="@id/ib_five"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ib_one"
         app:layout_constraintEnd_toStartOf="@id/ib_four"/>
     <ImageButton
         android:id="@+id/ib_four"
-        android:layout_width="@dimen/_150sdp"
-        android:layout_height="@dimen/_200sdp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:src="@drawable/abc_vector_test"
+        app:layout_constraintBottom_toTopOf="@id/ib_six"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/ib_three"
         app:layout_constraintTop_toBottomOf="@id/ib_two" />
     <ImageButton
         android:id="@+id/ib_five"
-        android:layout_width="@dimen/_150sdp"
-        android:layout_height="@dimen/_200sdp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:src="@drawable/abc_vector_test"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ib_three"
         app:layout_constraintEnd_toStartOf="@id/ib_six"/>
     <ImageButton
         android:id="@+id/ib_six"
-        android:layout_width="@dimen/_150sdp"
-        android:layout_height="@dimen/_200sdp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:src="@drawable/abc_vector_test"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/ib_five"
         app:layout_constraintTop_toBottomOf="@id/ib_four" />
 </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
