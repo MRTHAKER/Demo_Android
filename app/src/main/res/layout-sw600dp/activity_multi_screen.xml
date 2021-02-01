@@ -12,14 +12,16 @@
     tools:context=".ui.dimen.MultiScreenActivity">
     <ImageButton
         android:id="@+id/ib_zero"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:backgroundTint="@color/cardview_dark_background"
         android:src="@drawable/ic_launcher_foreground"
         android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toStartOf="@id/ib_one"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <ImageButton
         android:id="@+id/ib_one"
         android:layout_width="@dimen/_150sdp"

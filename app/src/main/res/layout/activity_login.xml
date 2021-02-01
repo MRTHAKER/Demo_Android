@@ -10,6 +10,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".ui.dimen.LoginActivity">
+
 <com.google.android.material.textview.MaterialTextView
     android:id="@+id/tv_signin"
     app:layout_constraintEnd_toEndOf="parent"
@@ -22,6 +23,7 @@
     android:layout_width="wrap_content"
     android:gravity="center"
     android:layout_height="wrap_content"/>
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_siginin_message"
         app:layout_constraintEnd_toEndOf="parent"
