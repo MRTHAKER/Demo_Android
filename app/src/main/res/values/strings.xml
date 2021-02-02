@@ -58,4 +58,8 @@
     <string name="dimen">DIMEN</string>
     <string name="login_with_dimen">LOGIN WITH DIMEN</string>
     <string name="multi_screen">MULTI SCREEN</string>
+    <string name="vector">VECTOR</string>
+    <string name="android_logo">Android logo</string>
+    <string name="shapes">Shapes</string>
+    <string name="selector">SELECTOR</string>
 </resources>

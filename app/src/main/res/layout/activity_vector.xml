@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.vector.VectorActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/vector"
+        android:textColor="@color/black" />
+    <LinearLayout
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/_163sdp"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/vector_menu_android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/android_logo" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/vector_menu_shape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shapes" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/vector_menu_selector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/selector" />
+    </LinearLayout>
+</LinearLayout>

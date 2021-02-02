@@ -37,10 +37,17 @@
         android:layout_marginEnd="10dp"
         android:text="@string/ui_topics_drawable"/>
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_ui_topis_dimen"
+        android:id="@+id/btn_ui_topics_dimen"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:text="@string/dimen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_ui_topics_vector"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/vector"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>
