@@ -15,6 +15,7 @@
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             app:statusBarScrim="@color/teal_700"
+            app:contentScrim="@color/teal_700"
             android:layout_height="wrap_content"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
@@ -56,6 +57,7 @@
         android:src="@drawable/ic_done_black_48"
         android:backgroundTint="@color/green"
         app:layout_anchor="@id/tv_action"
-        app:layout_anchorGravity="end"
-        app:layout_behavior="com.google.android.material.floatingactionbutton.FloatingActionButton$Behavior" />
+        app:layout_anchorGravity="end|bottom"
+        app:layout_behavior="com.google.android.material.floatingactionbutton.FloatingActionButton$Behavior"
+        android:contentDescription="@string/floating_action" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
