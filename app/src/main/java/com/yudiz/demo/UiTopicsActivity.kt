@@ -9,6 +9,7 @@ import com.yudiz.demo.databinding.ActivityUiTopicsBinding
 import com.yudiz.demo.ui.dimen.DimenActivity
 import com.yudiz.demo.ui.drawable.DrawableMenuActivity
 import com.yudiz.demo.ui.layouts.LayoutsActivity
+import com.yudiz.demo.ui.menu.MenuActivity
 import com.yudiz.demo.ui.recyclerview.RecyclerViewActivity
 import com.yudiz.demo.ui.toolbar.ToolbarActivity
 import com.yudiz.demo.ui.vector.VectorActivity
@@ -29,6 +30,7 @@ class UiTopicsActivity : AppCompatActivity(),View.OnClickListener {
         binding.btnUiTopicsViewpager.setOnClickListener(this)
         binding.btnUiTopicsRecycler.setOnClickListener(this)
         binding.btnUiTopicsToolbar.setOnClickListener(this)
+        binding.btnUiTopicsMenu.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -41,6 +43,7 @@ class UiTopicsActivity : AppCompatActivity(),View.OnClickListener {
             binding.btnUiTopicsViewpager->startActivity(Intent(this,ViewPagerActivity::class.java))
             binding.btnUiTopicsRecycler->startActivity(Intent(this,RecyclerViewActivity::class.java))
             binding.btnUiTopicsToolbar->startActivity(Intent(this,ToolbarActivity::class.java))
+            binding.btnUiTopicsMenu->startActivity(Intent(this,MenuActivity::class.java))
         }
     }
 }
