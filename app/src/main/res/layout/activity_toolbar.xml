@@ -23,7 +23,6 @@
                 android:id="@+id/mainToolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:fitsSystemWindows="true"
                 app:navigationIcon="@drawable/ic_clear_black_48"
                 app:title="Hello Toolbar" />
 
