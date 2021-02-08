@@ -5,19 +5,23 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.google.android.material.button.MaterialButton
+import com.yudiz.demo.databinding.ActivityMainBinding
+import com.yudiz.demo.navigation.NavigationActivity
 
 class MainActivity : AppCompatActivity(),View.OnClickListener {
-    lateinit var btn_ui:MaterialButton
+    lateinit var binding:ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        btn_ui=findViewById(R.id.btn_ui)
-        btn_ui.setOnClickListener(this)
+        binding= ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.btnUi.setOnClickListener(this)
+        binding.btnNavigation.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
-        if(v==btn_ui){
-            startActivity(Intent(this,UiTopicsActivity::class.java))
+        when(v){
+            binding.btnUi->startActivity(Intent(this,UiTopicsActivity::class.java))
+            binding.btnNavigation->startActivity(Intent(this,NavigationActivity::class.java))
         }
     }
 }

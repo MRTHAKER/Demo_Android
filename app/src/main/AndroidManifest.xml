@@ -9,7 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Demo">
-        <activity android:name=".ui.menu.MenuActivity"/>
+        <activity android:name=".navigation.FilterImageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".navigation.FilterTextActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".navigation.FilterMainActivity" />
+        <activity android:name=".navigation.IntentThreeActivity" />
+        <activity android:name=".navigation.IntentTwoActivity" />
+        <activity android:name=".navigation.IntentOneActivity" />
+        <activity android:name=".navigation.NavigationActivity" />
+        <activity android:name=".ui.menu.MenuActivity" />
         <activity
             android:name=".ui.toolbar.ToolbarActivity"
             android:theme="@style/Theme.Demo.NoActionBar" />

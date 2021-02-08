@@ -84,4 +84,13 @@ Adipiscing elit pellentesque habitant morbi tristique. Cursus sit amet dictum si
     <string name="block">Block</string>
     <string name="clear">Clear</string>
     <string name="menu">MENU</string>
+    <string name="navigation">NAVIGATION</string>
+    <string name="nav_topics_intent">INTENT</string>
+    <string name="nav_topics_Intent_filters">INTENT FILTERS</string>
+    <string name="next">NEXT</string>
+    <string name="enter_address">Enter address</string>
+    <string name="back">BACK</string>
+    <string name="share">Enter your shareable text</string>
+    <string name="share_text">Share Text</string>
+    <string name="share_image">Share Image</string>
 </resources>

@@ -3,32 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
+    android:layout_height="match_parent"
+    tools:context=".navigation.NavigationActivity">
     <TextView
-        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/android_topics"
         android:layout_gravity="center"
-        android:textColor="@color/black"
-        android:layout_marginEnd="10dp"/>
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/navigation"
+        android:textColor="@color/black" />
+
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_ui"
+        android:id="@+id/nav_topics_intent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:text="@string/ui"/>
+        android:text="@string/nav_topics_intent" />
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_navigation"
+        android:id="@+id/nav_topics_Intent_filters"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:text="@string/navigation"/>
-
-
+        android:text="@string/nav_topics_Intent_filters" />
 </LinearLayout>
