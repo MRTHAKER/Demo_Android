@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Demo">
-        <activity android:name=".navigation.DialogsDemo.DialogsActivity"/>
+        <activity android:name=".navigation.fragmentsDemo.ViewPagerNavigationActivity"></activity>
+        <activity android:name=".navigation.DialogsDemo.DialogsActivity" />
         <activity android:name=".navigation.fragmentsDemo.FragmentsMainActivity" />
         <activity android:name=".layout.LayoutMainActivity" />
         <activity android:name=".navigation.IntentFilter.FilterImageActivity">

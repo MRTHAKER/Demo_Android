@@ -107,4 +107,5 @@ Adipiscing elit pellentesque habitant morbi tristique. Cursus sit amet dictum si
     <string name="Done">Done</string>
     <string name="nav_topics_dialogs">DIALOGS</string>
     <string name="logout">LOGOUT</string>
+    <string name="nav_topics_page_navigation">VIEWPAGER NAVIGATION</string>
 </resources>

@@ -8,6 +8,7 @@ import com.yudiz.demo.navigation.DialogsDemo.DialogsActivity
 import com.yudiz.demo.navigation.Intent.IntentOneActivity
 import com.yudiz.demo.navigation.IntentFilter.FilterMainActivity
 import com.yudiz.demo.navigation.fragmentsDemo.FragmentsMainActivity
+import com.yudiz.demo.navigation.fragmentsDemo.ViewPagerNavigationActivity
 
 class NavigationActivity : AppCompatActivity() {
     lateinit var binding: ActivityNavigationBinding
@@ -46,6 +47,9 @@ class NavigationActivity : AppCompatActivity() {
                     DialogsActivity::class.java
                 )
             )
+        }
+        binding.navTopicsPageNavigation.setOnClickListener {
+            startActivity(Intent(this, ViewPagerNavigationActivity::class.java))
         }
 
     }
