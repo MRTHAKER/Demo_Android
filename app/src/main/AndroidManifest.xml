@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Demo">
-        <activity android:name=".layout.LayoutMainActivity"></activity>
-        <activity android:name=".navigation.FilterImageActivity">
+        <activity android:name=".navigation.DialogsDemo.DialogsActivity"/>
+        <activity android:name=".navigation.fragmentsDemo.FragmentsMainActivity" />
+        <activity android:name=".layout.LayoutMainActivity" />
+        <activity android:name=".navigation.IntentFilter.FilterImageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 
@@ -19,7 +21,7 @@
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
-        <activity android:name=".navigation.FilterTextActivity">
+        <activity android:name=".navigation.IntentFilter.FilterTextActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 
@@ -28,10 +30,10 @@
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
-        <activity android:name=".navigation.FilterMainActivity" />
-        <activity android:name=".navigation.IntentThreeActivity" />
-        <activity android:name=".navigation.IntentTwoActivity" />
-        <activity android:name=".navigation.IntentOneActivity" />
+        <activity android:name=".navigation.IntentFilter.FilterMainActivity" />
+        <activity android:name=".navigation.Intent.IntentThreeActivity" />
+        <activity android:name=".navigation.Intent.IntentTwoActivity" />
+        <activity android:name=".navigation.Intent.IntentOneActivity" />
         <activity android:name=".navigation.NavigationActivity" />
         <activity android:name=".layout.menu.MenuActivity" />
         <activity

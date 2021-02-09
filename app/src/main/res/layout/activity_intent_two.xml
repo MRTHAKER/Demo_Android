@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".navigation.IntentTwoActivity">
+    tools:context=".navigation.Intent.IntentTwoActivity">
 
     <EditText
         android:id="@+id/int_two_et_address"

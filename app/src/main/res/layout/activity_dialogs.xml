@@ -5,9 +5,17 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".navigation.IntentFilter.FilterImageActivity">
-<ImageView
-    android:id="@+id/filter_iv"
+    tools:context=".navigation.DialogsDemo.DialogsActivity">
+<Button
+    android:id="@+id/btn_alert_dialog"
     android:layout_width="match_parent"
+    android:layout_margin="@dimen/_10sdp"
+    android:text="@string/alert_dialog"
     android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_bottom_sheet"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="@string/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </LinearLayout>

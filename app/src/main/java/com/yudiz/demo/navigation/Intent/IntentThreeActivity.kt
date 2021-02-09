@@ -1,4 +1,4 @@
-package com.yudiz.demo.navigation
+package com.yudiz.demo.navigation.Intent
 
 import android.content.Intent
 import android.os.Bundle

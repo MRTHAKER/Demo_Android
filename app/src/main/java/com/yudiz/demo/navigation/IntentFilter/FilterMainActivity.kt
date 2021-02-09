@@ -1,4 +1,4 @@
-package com.yudiz.demo.navigation
+package com.yudiz.demo.navigation.IntentFilter
 
 import android.annotation.SuppressLint
 import android.content.Intent
