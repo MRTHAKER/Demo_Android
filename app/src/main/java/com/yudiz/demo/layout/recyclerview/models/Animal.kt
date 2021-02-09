@@ -1,4 +1,4 @@
-package com.yudiz.demo.ui.recyclerview.models
+package com.yudiz.demo.layout.recyclerview.models
 
 import android.graphics.drawable.Drawable
 

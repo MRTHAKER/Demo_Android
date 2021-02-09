@@ -1,4 +1,4 @@
-package com.yudiz.demo.ui.recyclerview
+package com.yudiz.demo.layout.recyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,7 +6,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yudiz.demo.R
 import com.yudiz.demo.databinding.ActivityRecyclerviewViewBinding
-import com.yudiz.demo.ui.recyclerview.models.Animal
+import com.yudiz.demo.layout.recyclerview.models.Animal
 
 class RecyclerViewActivity : AppCompatActivity() {
     lateinit var binding: ActivityRecyclerviewViewBinding

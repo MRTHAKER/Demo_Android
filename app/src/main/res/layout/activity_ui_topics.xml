@@ -39,51 +39,5 @@
         android:layout_marginEnd="10dp"
         android:text="@string/ui_topics_drawable" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_ui_topics_dimen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="@string/dimen" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_ui_topics_vector"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="@string/vector" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_ui_topics_viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="@string/view_pager" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_ui_topics_recycler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="@string/recycler_view" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_ui_topics_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="@string/toolbar" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_ui_topics_menu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="@string/menu" />
 </LinearLayout>

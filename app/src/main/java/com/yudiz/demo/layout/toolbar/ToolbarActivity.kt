@@ -1,10 +1,8 @@
-package com.yudiz.demo.ui.toolbar
+package com.yudiz.demo.layout.toolbar
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
 import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import com.yudiz.demo.R

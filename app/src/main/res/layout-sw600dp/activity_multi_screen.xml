@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dimen.MultiScreenActivity">
+    tools:context=".layout.dimen.MultiScreenActivity">
     <ImageButton
         android:id="@+id/ib_zero"
         android:layout_width="0dp"

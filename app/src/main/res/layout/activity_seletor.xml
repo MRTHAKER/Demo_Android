@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.vector.SeletorActivity">
+    tools:context=".layout.vector.SelectorActivity">
 
 <ImageView
     android:src="@color/colour_selector"

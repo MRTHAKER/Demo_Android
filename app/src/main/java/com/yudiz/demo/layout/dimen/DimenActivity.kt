@@ -1,10 +1,9 @@
-package com.yudiz.demo.ui.dimen
+package com.yudiz.demo.layout.dimen
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.yudiz.demo.R
 import com.yudiz.demo.databinding.ActivityDimenBinding
 
 class DimenActivity : AppCompatActivity(),View.OnClickListener {

@@ -1,11 +1,11 @@
-package com.yudiz.demo.ui.recyclerview
+package com.yudiz.demo.layout.recyclerview
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.yudiz.demo.databinding.RowItemRvBinding
-import com.yudiz.demo.ui.recyclerview.models.Animal
+import com.yudiz.demo.layout.recyclerview.models.Animal
 
 class RecyclerAdapter(val items: List<Animal>) : RecyclerView.Adapter<RecyclerAdapter.RecyclerViewHolder>() {
     lateinit var binding: RowItemRvBinding

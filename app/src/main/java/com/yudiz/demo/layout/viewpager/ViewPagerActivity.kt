@@ -1,11 +1,8 @@
-package com.yudiz.demo.ui.viewpager
+package com.yudiz.demo.layout.viewpager
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.FragmentManager
-import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
-import com.yudiz.demo.R
 import com.yudiz.demo.databinding.ActivityViewPagerBinding
 
 class ViewPagerActivity : AppCompatActivity() {

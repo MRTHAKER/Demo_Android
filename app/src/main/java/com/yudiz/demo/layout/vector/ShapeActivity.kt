@@ -1,12 +1,12 @@
-package com.yudiz.demo.ui.dimen
+package com.yudiz.demo.layout.vector
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.yudiz.demo.R
 
-class LoginActivity : AppCompatActivity() {
+class ShapeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_shape)
     }
 }

@@ -1,4 +1,4 @@
-package com.yudiz.demo.ui.viewpager
+package com.yudiz.demo.layout.viewpager
 
 import android.annotation.SuppressLint
 import android.content.Context

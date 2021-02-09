@@ -9,17 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Demo">
+        <activity android:name=".layout.LayoutMainActivity"></activity>
         <activity android:name=".navigation.FilterImageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
         <activity android:name=".navigation.FilterTextActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
@@ -28,19 +33,19 @@
         <activity android:name=".navigation.IntentTwoActivity" />
         <activity android:name=".navigation.IntentOneActivity" />
         <activity android:name=".navigation.NavigationActivity" />
-        <activity android:name=".ui.menu.MenuActivity" />
+        <activity android:name=".layout.menu.MenuActivity" />
         <activity
-            android:name=".ui.toolbar.ToolbarActivity"
+            android:name=".layout.toolbar.ToolbarActivity"
             android:theme="@style/Theme.Demo.NoActionBar" />
-        <activity android:name=".ui.recyclerview.RecyclerViewActivity" />
-        <activity android:name=".ui.viewpager.ViewPagerActivity" />
-        <activity android:name=".ui.vector.SeletorActivity" />
-        <activity android:name=".ui.vector.ShapeActivity" />
-        <activity android:name=".ui.vector.AndroidLogoActivity" />
-        <activity android:name=".ui.vector.VectorActivity" />
-        <activity android:name=".ui.dimen.DimenActivity" />
-        <activity android:name=".ui.dimen.MultiScreenActivity" />
-        <activity android:name=".ui.dimen.LoginActivity" />
+        <activity android:name=".layout.recyclerview.RecyclerViewActivity" />
+        <activity android:name=".layout.viewpager.ViewPagerActivity" />
+        <activity android:name=".layout.vector.SelectorActivity" />
+        <activity android:name=".layout.vector.ShapeActivity" />
+        <activity android:name=".layout.vector.AndroidLogoActivity" />
+        <activity android:name=".layout.vector.VectorActivity" />
+        <activity android:name=".layout.dimen.DimenActivity" />
+        <activity android:name=".layout.dimen.MultiScreenActivity" />
+        <activity android:name=".layout.dimen.LoginActivity" />
         <activity android:name=".ui.drawable.DrawableBasicActivity" />
         <activity android:name=".ui.drawable.DrawableMenuActivity" />
         <activity android:name=".ui.layouts.CustomLayoutActivity" />

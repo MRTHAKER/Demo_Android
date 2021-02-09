@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import com.google.android.material.button.MaterialButton
 import com.yudiz.demo.databinding.ActivityMainBinding
+import com.yudiz.demo.layout.LayoutMainActivity
 import com.yudiz.demo.navigation.NavigationActivity
 
 class MainActivity : AppCompatActivity(),View.OnClickListener {
@@ -16,12 +17,14 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         setContentView(binding.root)
         binding.btnUi.setOnClickListener(this)
         binding.btnNavigation.setOnClickListener(this)
+        binding.btnLayout.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when(v){
             binding.btnUi->startActivity(Intent(this,UiTopicsActivity::class.java))
             binding.btnNavigation->startActivity(Intent(this,NavigationActivity::class.java))
+            binding.btnLayout->startActivity(Intent(this,LayoutMainActivity::class.java))
         }
     }
 }

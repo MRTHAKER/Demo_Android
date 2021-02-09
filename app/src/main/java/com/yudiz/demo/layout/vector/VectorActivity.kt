@@ -1,10 +1,9 @@
-package com.yudiz.demo.ui.vector
+package com.yudiz.demo.layout.vector
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.yudiz.demo.R
 import com.yudiz.demo.databinding.ActivityVectorBinding
 
 class VectorActivity : AppCompatActivity(), View.OnClickListener {
@@ -22,7 +21,7 @@ class VectorActivity : AppCompatActivity(), View.OnClickListener {
         when(v){
             binding.vectorMenuAndroid->startActivity(Intent(this,AndroidLogoActivity::class.java))
             binding.vectorMenuShape->startActivity(Intent(this,ShapeActivity::class.java))
-            binding.vectorMenuSelector->startActivity(Intent(this,SeletorActivity::class.java))
+            binding.vectorMenuSelector->startActivity(Intent(this,SelectorActivity::class.java))
         }
     }
 }

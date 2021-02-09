@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".layout.LayoutMainActivity">
+    <TextView
+        android:text="@string/ui_topics_layout"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_layout_topics_dimen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/dimen" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_layout_topics_vector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/vector" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_layout_topics_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/view_pager" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_layout_topics_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/recycler_view" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_layout_topics_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/toolbar" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_layout_topics_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/menu" />
+</LinearLayout>
