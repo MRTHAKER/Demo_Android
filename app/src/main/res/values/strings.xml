@@ -108,4 +108,22 @@ Adipiscing elit pellentesque habitant morbi tristique. Cursus sit amet dictum si
     <string name="nav_topics_dialogs">DIALOGS</string>
     <string name="logout">LOGOUT</string>
     <string name="nav_topics_page_navigation">VIEWPAGER NAVIGATION</string>
+    <string name="add_image">Add Image</string>
+    <string name="add_address">Add Address</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="address">Address</string>
+    <string name="prefix_image">image</string>
+    <string name="nav_topics_permissions">PERMISSIONS</string>
+    <string name="location_message_settings">For this feature to work it needs location permission, enable location permission from settings to access this feature.</string>
+    <string name="camera_message_settings">For this feature to work it needs camera permission, enable camera permission from settings to access this feature.</string>
+    <string name="attention">Attention!</string>
+    <string name="ok">Okay.</string>
+    <string name="enable_location">Enable GPS in high accuracy mode.</string>
+    <string name="notify_simple">Simple Notification</string>
+    <string name="notify_action">Action Notification</string>
+    <string name="channel_name">testing</string>
+    <string name="channel_description">testing channel</string>
+    <string name="channel_test_id">111</string>
+    <string name="nav_topics_notifications">NOTIFICATIONS</string>
 </resources>

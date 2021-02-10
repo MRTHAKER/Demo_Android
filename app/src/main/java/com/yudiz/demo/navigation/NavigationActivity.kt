@@ -9,6 +9,8 @@ import com.yudiz.demo.navigation.intent.IntentOneActivity
 import com.yudiz.demo.navigation.intent_filter.FilterMainActivity
 import com.yudiz.demo.navigation.fragments_demo.FragmentsMainActivity
 import com.yudiz.demo.navigation.fragments_demo.ViewPagerNavigationActivity
+import com.yudiz.demo.navigation.notifications.NotificationsActivity
+import com.yudiz.demo.navigation.permissions.PermissionsActivity
 
 class NavigationActivity : AppCompatActivity() {
     lateinit var binding: ActivityNavigationBinding
@@ -50,6 +52,22 @@ class NavigationActivity : AppCompatActivity() {
         }
         binding.navTopicsPageNavigation.setOnClickListener {
             startActivity(Intent(this, ViewPagerNavigationActivity::class.java))
+        }
+        binding.navTopicsPermissions.setOnClickListener {
+            startActivity(
+                Intent(
+                    this,
+                    PermissionsActivity::class.java
+                )
+            )
+        }
+        binding.navTopicsNotifications.setOnClickListener {
+            startActivity(
+                Intent(
+                    this,
+                    NotificationsActivity::class.java
+                )
+            )
         }
 
     }

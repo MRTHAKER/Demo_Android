@@ -54,4 +54,18 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:text="@string/nav_topics_page_navigation" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/nav_topics_permissions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/nav_topics_permissions" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/nav_topics_notifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/nav_topics_notifications" />
 </LinearLayout>
