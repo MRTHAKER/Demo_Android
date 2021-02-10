@@ -1,11 +1,8 @@
-package com.yudiz.demo.navigation.fragmentsDemo.Fragments
+package com.yudiz.demo.navigation.fragments_demo.Fragments
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.yudiz.demo.layout.viewpager.fragments.AFragment
-import com.yudiz.demo.layout.viewpager.fragments.BFragment
-import com.yudiz.demo.layout.viewpager.fragments.CFragment
 
 class ViewPagerNavigationAdapter(private val fm: FragmentManager, private val behavior: Int) :
     FragmentPagerAdapter(fm, behavior) {

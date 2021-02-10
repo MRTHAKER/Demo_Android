@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".navigation.DialogsDemo.DialogsActivity">
+    tools:context=".navigation.dialogs_demo.DialogsActivity">
 <Button
     android:id="@+id/btn_alert_dialog"
     android:layout_width="match_parent"

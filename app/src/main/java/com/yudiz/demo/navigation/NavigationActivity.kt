@@ -4,11 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.yudiz.demo.databinding.ActivityNavigationBinding
-import com.yudiz.demo.navigation.DialogsDemo.DialogsActivity
-import com.yudiz.demo.navigation.Intent.IntentOneActivity
-import com.yudiz.demo.navigation.IntentFilter.FilterMainActivity
-import com.yudiz.demo.navigation.fragmentsDemo.FragmentsMainActivity
-import com.yudiz.demo.navigation.fragmentsDemo.ViewPagerNavigationActivity
+import com.yudiz.demo.navigation.dialogs_demo.DialogsActivity
+import com.yudiz.demo.navigation.intent.IntentOneActivity
+import com.yudiz.demo.navigation.intent_filter.FilterMainActivity
+import com.yudiz.demo.navigation.fragments_demo.FragmentsMainActivity
+import com.yudiz.demo.navigation.fragments_demo.ViewPagerNavigationActivity
 
 class NavigationActivity : AppCompatActivity() {
     lateinit var binding: ActivityNavigationBinding

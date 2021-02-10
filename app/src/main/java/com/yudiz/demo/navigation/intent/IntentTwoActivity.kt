@@ -1,11 +1,14 @@
-package com.yudiz.demo.navigation.Intent
+package com.yudiz.demo.navigation.intent
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.yudiz.demo.R
 import com.yudiz.demo.databinding.ActivityIntentTwoBinding
 
 class IntentTwoActivity : AppCompatActivity() {
+    val requestCode=3
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding: ActivityIntentTwoBinding = ActivityIntentTwoBinding.inflate(layoutInflater)
@@ -13,16 +16,16 @@ class IntentTwoActivity : AppCompatActivity() {
         val bundle = intent.extras
         binding.intTwoBtnNext.setOnClickListener {
             val third = Intent(this, IntentThreeActivity::class.java)
-            bundle?.putString("address", binding.intTwoEtAddress.toString())
+            bundle?.putString(getString(R.string.address), binding.intTwoEtAddress.toString())
             third.putExtras(bundle!!)
-            startActivityForResult(third, 2)
+            startActivityForResult(third, requestCode)
         }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == 10) {
-            setResult(10, data)
+        if (resultCode == Activity.RESULT_OK) {
+            setResult(Activity.RESULT_OK, data)
             finish()
         }
     }

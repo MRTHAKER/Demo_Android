@@ -1,18 +1,15 @@
-package com.yudiz.demo.navigation.DialogsDemo
+package com.yudiz.demo.navigation.dialogs_demo
 
 import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.yudiz.demo.R
 import com.yudiz.demo.databinding.ActivityDialogsBinding
 import com.yudiz.demo.databinding.BottomSheetLayoutBinding
-import com.yudiz.demo.databinding.CustomLayoutBinding
 
 class DialogsActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var binding: ActivityDialogsBinding
@@ -41,6 +38,7 @@ class DialogsActivity : AppCompatActivity(), View.OnClickListener {
         bottomsheet.setContentView(sheetBinding.root)
         sheetBinding.sheetItemOne.setOnClickListener(this)
         sheetBinding.sheetItemTwo.setOnClickListener(this)
+        sheetBinding.btnSheetCancel.setOnClickListener(this)
 
     }
 
@@ -52,6 +50,10 @@ class DialogsActivity : AppCompatActivity(), View.OnClickListener {
             }
             sheetBinding.sheetItemTwo -> {
                 Toast.makeText(this, "Clicked on Done", Toast.LENGTH_SHORT).show()
+                bottomsheet.dismiss()
+            }
+            sheetBinding.btnSheetCancel -> {
+                Toast.makeText(this, "Cancelled", Toast.LENGTH_SHORT).show()
                 bottomsheet.dismiss()
             }
             binding.btnBottomSheet -> bottomsheet.show()

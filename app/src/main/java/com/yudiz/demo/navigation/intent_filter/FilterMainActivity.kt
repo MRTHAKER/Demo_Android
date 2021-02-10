@@ -1,11 +1,11 @@
-package com.yudiz.demo.navigation.IntentFilter
+package com.yudiz.demo.navigation.intent_filter
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.yudiz.demo.R
 import com.yudiz.demo.databinding.ActivityFilterMainBinding
 
 class FilterMainActivity : AppCompatActivity(), View.OnClickListener {
@@ -18,7 +18,6 @@ class FilterMainActivity : AppCompatActivity(), View.OnClickListener {
         binding.filterMainBtnImg.setOnClickListener(this)
     }
 
-    @SuppressLint("UseCompatLoadingForDrawables")
     override fun onClick(v: View?) {
         when (v) {
             binding.filterMainBtnImg -> {
@@ -32,7 +31,7 @@ class FilterMainActivity : AppCompatActivity(), View.OnClickListener {
                     )
                     type = "image/*"
                 }
-                startActivity(Intent.createChooser(sendImage, "Share Image with"))
+                startActivity(Intent.createChooser(sendImage, getString(R.string.share_image)))
             }
             binding.filterMainBtnTxt -> {
                 val sendText = Intent().apply {
@@ -40,7 +39,7 @@ class FilterMainActivity : AppCompatActivity(), View.OnClickListener {
                     putExtra(Intent.EXTRA_TEXT, binding.filterMainEt.text.toString())
                     type = "text/plain"
                 }
-                startActivity(Intent.createChooser(sendText,"Share your text"))
+                startActivity(Intent.createChooser(sendText,getString(R.string.share_text)))
             }
         }
     }

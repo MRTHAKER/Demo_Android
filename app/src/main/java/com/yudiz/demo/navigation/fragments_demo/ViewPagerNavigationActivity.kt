@@ -1,4 +1,4 @@
-package com.yudiz.demo.navigation.fragmentsDemo
+package com.yudiz.demo.navigation.fragments_demo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,8 +7,7 @@ import androidx.viewpager.widget.ViewPager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.yudiz.demo.R
 import com.yudiz.demo.databinding.ActivityViewPagerNavigationBinding
-import com.yudiz.demo.layout.viewpager.ViewPagerAdapter
-import com.yudiz.demo.navigation.fragmentsDemo.Fragments.ViewPagerNavigationAdapter
+import com.yudiz.demo.navigation.fragments_demo.Fragments.ViewPagerNavigationAdapter
 
 class ViewPagerNavigationActivity : AppCompatActivity(),
     BottomNavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener {

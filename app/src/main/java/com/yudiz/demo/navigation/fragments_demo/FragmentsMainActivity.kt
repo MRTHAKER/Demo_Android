@@ -1,16 +1,14 @@
-package com.yudiz.demo.navigation.fragmentsDemo
+package com.yudiz.demo.navigation.fragments_demo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.MenuItem
-import androidx.fragment.app.FragmentManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.yudiz.demo.R
 import com.yudiz.demo.databinding.ActivityFragmentsMainBinding
-import com.yudiz.demo.navigation.fragmentsDemo.Fragments.HomeFragment
-import com.yudiz.demo.navigation.fragmentsDemo.Fragments.SettingsFragment
-import com.yudiz.demo.navigation.fragmentsDemo.Fragments.TasksFragment
+import com.yudiz.demo.navigation.fragments_demo.Fragments.HomeFragment
+import com.yudiz.demo.navigation.fragments_demo.Fragments.SettingsFragment
+import com.yudiz.demo.navigation.fragments_demo.Fragments.TasksFragment
 
 class FragmentsMainActivity : AppCompatActivity(),
     BottomNavigationView.OnNavigationItemSelectedListener {

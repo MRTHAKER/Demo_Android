@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Demo">
-        <activity android:name=".navigation.fragmentsDemo.ViewPagerNavigationActivity"></activity>
-        <activity android:name=".navigation.DialogsDemo.DialogsActivity" />
-        <activity android:name=".navigation.fragmentsDemo.FragmentsMainActivity" />
+        <activity android:name=".navigation.fragments_demo.ViewPagerNavigationActivity"></activity>
+        <activity android:name=".navigation.dialogs_demo.DialogsActivity" />
+        <activity android:name=".navigation.fragments_demo.FragmentsMainActivity" />
         <activity android:name=".layout.LayoutMainActivity" />
-        <activity android:name=".navigation.IntentFilter.FilterImageActivity">
+        <activity android:name=".navigation.intent_filter.FilterImageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 
@@ -22,7 +22,7 @@
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
-        <activity android:name=".navigation.IntentFilter.FilterTextActivity">
+        <activity android:name=".navigation.intent_filter.FilterTextActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 
@@ -31,10 +31,10 @@
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
-        <activity android:name=".navigation.IntentFilter.FilterMainActivity" />
-        <activity android:name=".navigation.Intent.IntentThreeActivity" />
-        <activity android:name=".navigation.Intent.IntentTwoActivity" />
-        <activity android:name=".navigation.Intent.IntentOneActivity" />
+        <activity android:name=".navigation.intent_filter.FilterMainActivity" />
+        <activity android:name=".navigation.intent.IntentThreeActivity" />
+        <activity android:name=".navigation.intent.IntentTwoActivity" />
+        <activity android:name=".navigation.intent.IntentOneActivity" />
         <activity android:name=".navigation.NavigationActivity" />
         <activity android:name=".layout.menu.MenuActivity" />
         <activity
