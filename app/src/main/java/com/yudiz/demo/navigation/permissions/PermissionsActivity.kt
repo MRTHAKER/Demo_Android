@@ -6,11 +6,13 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.*
+import android.os.Build
 import android.os.Bundle
 import android.os.CancellationSignal
 import android.provider.Settings
 import android.view.View
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.location.LocationManagerCompat
@@ -21,7 +23,7 @@ import java.util.*
 import java.util.function.Consumer
 
 
-class PermissionsActivity : AppCompatActivity(), View.OnClickListener, LocationListener {
+class PermissionsActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var binding: ActivityPermissionsBinding
     private val locationCode = 10
     private val cameraCode = 9
@@ -33,6 +35,7 @@ class PermissionsActivity : AppCompatActivity(), View.OnClickListener, LocationL
         binding.btnAddAddress.setOnClickListener(this)
     }
 
+    @RequiresApi(Build.VERSION_CODES.P)
     @SuppressLint("MissingPermission")
     override fun onClick(v: View?) {
         when (v) {
@@ -41,8 +44,14 @@ class PermissionsActivity : AppCompatActivity(), View.OnClickListener, LocationL
                     Toast.makeText(this, "Accessing Location", Toast.LENGTH_SHORT).show()
                     val manager = (getSystemService(Context.LOCATION_SERVICE) as LocationManager)
                     if (manager.isLocationEnabled) {
-                        manager.requestLocationUpdates(LocationManager.GPS_PROVIDER,5000.toLong(),
-                            5.toFloat(),this)
+                        manager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0.toLong(),
+                            0.toFloat(),object :LocationListener{
+                                override fun onLocationChanged(location: Location) {
+                                    Toast.makeText(this@PermissionsActivity,"ok",Toast.LENGTH_SHORT).show()
+                                    binding.addressTv.text = location.latitude.toString()
+                                    binding.addressTv.append(location.longitude.toString())
+                                }
+                            })
                     } else {
                         Toast.makeText(this, getString(R.string.enable_location), Toast.LENGTH_LONG)
                             .show()
@@ -80,6 +89,7 @@ class PermissionsActivity : AppCompatActivity(), View.OnClickListener, LocationL
         ) == PackageManager.PERMISSION_GRANTED
     }
 
+    @RequiresApi(Build.VERSION_CODES.P)
     @SuppressLint("MissingPermission")
     override fun onRequestPermissionsResult(
         requestCode: Int,
@@ -92,8 +102,16 @@ class PermissionsActivity : AppCompatActivity(), View.OnClickListener, LocationL
                 if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     val manager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
                     if (manager.isLocationEnabled) {
-                        manager.requestLocationUpdates(LocationManager.GPS_PROVIDER,5000.toLong(),
-                            5.toFloat(),this)
+                        manager.requestLocationUpdates(
+                            LocationManager.GPS_PROVIDER,
+                            0.toLong(),
+                            0.toFloat(),
+                            object : LocationListener {
+                                override fun onLocationChanged(location: Location) {
+                                    binding.addressTv.text = location.latitude.toString()
+                                    binding.addressTv.append(location.longitude.toString())
+                                }
+                            })
                     } else {
                         Toast.makeText(this, getString(R.string.enable_location), Toast.LENGTH_LONG)
                             .show()
@@ -126,26 +144,7 @@ class PermissionsActivity : AppCompatActivity(), View.OnClickListener, LocationL
         }
     }
 
-    override fun onLocationChanged(location: Location) {
-        /*Toast.makeText(this, "ok", Toast.LENGTH_SHORT).show()
-        val address = Geocoder(this, Locale.getDefault()).getFromLocation(
-            location.latitude,
-            location.longitude,
-            1
-        )
-        binding.addressTv.text = address[0].apply {
-            countryName
-            adminArea
-            subAdminArea
-            subLocality
-            postalCode
 
-        }.toString()*/
-        Toast.makeText(this, "ok", Toast.LENGTH_SHORT).show()
-        binding.addressTv.text=location.apply {
-            latitude
-            longitude
-        }.toString()
-    }
+
 
 }
