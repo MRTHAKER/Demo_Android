@@ -3,6 +3,7 @@ package com.yudiz.demo.navigation.permissions
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.*
@@ -27,6 +28,7 @@ class PermissionsActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var binding: ActivityPermissionsBinding
     private val locationCode = 10
     private val cameraCode = 9
+    private val galleryCode=8
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityPermissionsBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
@@ -43,13 +45,14 @@ class PermissionsActivity : AppCompatActivity(), View.OnClickListener {
                 if (checkSelf(Manifest.permission.ACCESS_FINE_LOCATION) && checkSelf(Manifest.permission.ACCESS_COARSE_LOCATION)) {
                     Toast.makeText(this, "Accessing Location", Toast.LENGTH_SHORT).show()
                     val manager = (getSystemService(Context.LOCATION_SERVICE) as LocationManager)
-                    if (manager.isLocationEnabled) {
+                    if (manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
                         manager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0.toLong(),
                             0.toFloat(),object :LocationListener{
                                 override fun onLocationChanged(location: Location) {
-                                    Toast.makeText(this@PermissionsActivity,"ok",Toast.LENGTH_SHORT).show()
-                                    binding.addressTv.text = location.latitude.toString()
-                                    binding.addressTv.append(location.longitude.toString())
+                                    binding.addressTv.text = location.apply {
+                                        latitude
+                                        longitude
+                                    }.toString()
                                 }
                             })
                     } else {
@@ -69,14 +72,29 @@ class PermissionsActivity : AppCompatActivity(), View.OnClickListener {
                 }
             }
             binding.btnAddImage -> {
-                if (checkSelf(Manifest.permission.CAMERA)) {
-                    Toast.makeText(this, "Opening Camera", Toast.LENGTH_SHORT).show()
-                } else {
-                    requestPermissions(
-                        arrayOf(
-                            Manifest.permission.CAMERA
-                        ), cameraCode
-                    )
+                MaterialAlertDialogBuilder(this).apply {
+                    setTitle(getString(R.string.select_photo))
+                    setIcon(R.drawable.ic_warning)
+                    setMessage(getString(R.string.location_message_settings))
+                    setPositiveButton(getString(R.string.camera), DialogInterface.OnClickListener{_, _ -> if (checkSelf(Manifest.permission.CAMERA)) {
+                        Toast.makeText(this@PermissionsActivity, "Opening Camera", Toast.LENGTH_SHORT).show()
+                    } else {
+                        requestPermissions(
+                            arrayOf(
+                                Manifest.permission.CAMERA
+                            ), cameraCode
+                        )
+                    }   } )
+                    setNegativeButton(getString(R.string.gallery), DialogInterface.OnClickListener { _, _ -> if (checkSelf(Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                        Toast.makeText(this@PermissionsActivity, "Opening Gallery", Toast.LENGTH_SHORT).show()
+                    } else {
+                        requestPermissions(
+                            arrayOf(
+                                Manifest.permission.READ_EXTERNAL_STORAGE
+                            ), galleryCode
+                        )
+                    }  })
+                    show()
                 }
             }
         }
@@ -89,7 +107,6 @@ class PermissionsActivity : AppCompatActivity(), View.OnClickListener {
         ) == PackageManager.PERMISSION_GRANTED
     }
 
-    @RequiresApi(Build.VERSION_CODES.P)
     @SuppressLint("MissingPermission")
     override fun onRequestPermissionsResult(
         requestCode: Int,
@@ -101,15 +118,17 @@ class PermissionsActivity : AppCompatActivity(), View.OnClickListener {
             locationCode -> {
                 if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     val manager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
-                    if (manager.isLocationEnabled) {
+                    if (manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
                         manager.requestLocationUpdates(
                             LocationManager.GPS_PROVIDER,
                             0.toLong(),
                             0.toFloat(),
                             object : LocationListener {
                                 override fun onLocationChanged(location: Location) {
-                                    binding.addressTv.text = location.latitude.toString()
-                                    binding.addressTv.append(location.longitude.toString())
+                                    binding.addressTv.text = location.apply {
+                                        latitude
+                                        longitude
+                                    }.toString()
                                 }
                             })
                     } else {
@@ -131,6 +150,19 @@ class PermissionsActivity : AppCompatActivity(), View.OnClickListener {
             cameraCode -> {
                 if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     Toast.makeText(this, "Camera permission granted", Toast.LENGTH_SHORT).show()
+                } else {
+                    MaterialAlertDialogBuilder(this).apply {
+                        setTitle("Attention!")
+                        setIcon(R.drawable.ic_warning)
+                        setMessage(getString(R.string.camera_message_settings))
+                        setNegativeButton(getString(R.string.ok), null)
+                        show()
+                    }
+                }
+            }
+            galleryCode->{
+                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(this, "Gallery permission granted", Toast.LENGTH_SHORT).show()
                 } else {
                     MaterialAlertDialogBuilder(this).apply {
                         setTitle("Attention!")
