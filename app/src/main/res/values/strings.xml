@@ -130,4 +130,6 @@ Adipiscing elit pellentesque habitant morbi tristique. Cursus sit amet dictum si
     <string name="select_photo">Select photo from</string>
     <string name="camera">Camera</string>
     <string name="gallery">Gallery</string>
+    <string name="nav_topics_content_provider">CONTENT PROVIDER</string>
+    <string name="get_content">Get Content</string>
 </resources>

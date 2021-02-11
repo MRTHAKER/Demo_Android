@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.yudiz.demo.databinding.ActivityNavigationBinding
+import com.yudiz.demo.navigation.content_provider.ContentProviderActivity
 import com.yudiz.demo.navigation.dialogs_demo.DialogsActivity
 import com.yudiz.demo.navigation.intent.IntentOneActivity
 import com.yudiz.demo.navigation.intent_filter.FilterMainActivity
@@ -66,6 +67,14 @@ class NavigationActivity : AppCompatActivity() {
                 Intent(
                     this,
                     NotificationsActivity::class.java
+                )
+            )
+        }
+        binding.navTopicsContentProvider.setOnClickListener {
+            startActivity(
+                Intent(
+                    this,
+                    ContentProviderActivity::class.java
                 )
             )
         }
