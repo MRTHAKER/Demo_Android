@@ -5,8 +5,7 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import android.util.Log
-import java.lang.StringBuilder
+
 
 
 class MyHelper(context: Context?, var table: String) :
@@ -22,23 +21,23 @@ class MyHelper(context: Context?, var table: String) :
         val values = ContentValues()
         values.apply {
             put("ID", "1")
-            put("NAME","MAHEK")
+            put("NAME", "MAHEK")
         }
-        db.insert(table, null,values)
+        db.insert(table, null, values)
     }
 
     fun Where(
     ): Cursor {
-        val db = this.readableDatabase
-        val cursor=db.query(table, arrayOf("ID", "NAME"), null, null, null, null, null)
-        cursor?.moveToFirst()
-        val sb = StringBuilder("Nothing")
-        while (cursor?.moveToNext() == true) {
-            sb.append(cursor.getString(cursor.getColumnIndex("ID")))
-            sb.append(cursor.getString(cursor.getColumnIndex("NAME")))
-        }
-        Log.d("Raw data",sb.toString())
-        return cursor
+        return this.writableDatabase.query(
+            table,
+            arrayOf("ID", "NAME"),
+            null,
+            null,
+            null,
+            null,
+            null
+        )
+
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {}

@@ -118,6 +118,7 @@ Adipiscing elit pellentesque habitant morbi tristique. Cursus sit amet dictum si
     <string name="location_message_settings">For this feature to work it needs location permission, enable location permission from settings to access this feature.</string>
     <string name="camera_message_settings">For this feature to work it needs camera permission, enable camera permission from settings to access this feature.</string>
     <string name="gallery_message_settings">For this feature to work it needs gallery permission, enable gallery permission from settings to access this feature.</string>
+    <string name="contacts_message_settings">For this feature to work it needs read contacts permission, enable read contacts permission from settings to access this feature.</string>
     <string name="attention">Attention!</string>
     <string name="ok">Okay.</string>
     <string name="enable_location">Enable GPS in high accuracy mode.</string>
@@ -132,4 +133,8 @@ Adipiscing elit pellentesque habitant morbi tristique. Cursus sit amet dictum si
     <string name="gallery">Gallery</string>
     <string name="nav_topics_content_provider">CONTENT PROVIDER</string>
     <string name="get_content">Get Content</string>
+    <string name="nav_topics_contact_provider">CONTACT PROVIDER</string>
+    <string name="nav_topics_broadcast_receiver">BROADCAST RECEIVER</string>
+    <string name="broadcast_hint">Enter your Broadcast text</string>
+    <string name="send_broadcast">Send Broadcast</string>
 </resources>

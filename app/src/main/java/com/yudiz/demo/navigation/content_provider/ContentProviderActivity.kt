@@ -13,10 +13,11 @@ class ContentProviderActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityContentProviderBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        var authority = "com.yudiz.demo.navigation.content_provider.CustomProvider"
+        var authority = "com.yudiz.demo.navigation.content_provider"
         var contentUri: Uri = Uri.parse("content://${authority}")
         binding.btnGetContent.setOnClickListener {
             val cursor = contentResolver.query(contentUri, null, null, null, null, null)
+            contentResolver.insert(contentUri,null)
             cursor?.moveToFirst()
             val sb = StringBuilder("lol")
             while (cursor?.moveToNext() == true) {

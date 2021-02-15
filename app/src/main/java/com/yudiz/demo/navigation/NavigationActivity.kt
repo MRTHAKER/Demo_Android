@@ -1,9 +1,12 @@
 package com.yudiz.demo.navigation
 
+import android.content.BroadcastReceiver
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.yudiz.demo.databinding.ActivityNavigationBinding
+import com.yudiz.demo.navigation.broadcast_receiver.BroadCastReceiverActivity
+import com.yudiz.demo.navigation.contact_provider.ContactProviderActivity
 import com.yudiz.demo.navigation.content_provider.ContentProviderActivity
 import com.yudiz.demo.navigation.dialogs_demo.DialogsActivity
 import com.yudiz.demo.navigation.intent.IntentOneActivity
@@ -78,6 +81,15 @@ class NavigationActivity : AppCompatActivity() {
                 )
             )
         }
+        binding.navTopicsContactProvider.setOnClickListener {
+            startActivity(
+                Intent(
+                    this,
+                    ContactProviderActivity::class.java
+                )
+            )
+        }
+        binding.navTopicsBroadcastReceiver.setOnClickListener { startActivity(Intent(this,BroadCastReceiverActivity::class.java)) }
 
     }
 }

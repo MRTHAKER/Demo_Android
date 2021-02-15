@@ -11,14 +11,17 @@ class CustomProvider: ContentProvider() {
     lateinit var  uriMatcher:UriMatcher
     lateinit var db:MyHelper
     var matchCode=2
-    var authority="com.yudiz.demo.navigation.content_provider.CustomProvider"
+    val table="EMPLOYEE"
+    var authority="com.yudiz.demo.navigation.content_provider"
+    val uri = "content://$authority/$table"
+    val CONTENT_URI = Uri.parse(uri)
 
     override fun onCreate(): Boolean {
         uriMatcher = UriMatcher(UriMatcher.NO_MATCH).apply {
-            addURI(authority, "EMPLOYEE/#", matchCode)
+            addURI(authority, "EMPLOYEE", matchCode)
         }
-        db=MyHelper(context,"EMPLOYEE")
-        db.Insert()
+        db=MyHelper(context,table)
+
         return true
     }
 
@@ -29,6 +32,7 @@ class CustomProvider: ContentProvider() {
         selectionArgs: Array<out String>?,
         sortOrder: String?
     ): Cursor {
+        db.Insert()
         return db.Where()
     }
 
@@ -37,6 +41,7 @@ class CustomProvider: ContentProvider() {
     }
 
     override fun insert(uri: Uri, values: ContentValues?): Uri? {
+        db.Insert()
         return Uri.EMPTY
     }
 
