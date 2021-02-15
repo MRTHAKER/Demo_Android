@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
 
-
 class MyHelper(context: Context?, var table: String) :
     SQLiteOpenHelper(context, name, null, version) {
     override fun onCreate(db: SQLiteDatabase) {

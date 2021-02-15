@@ -10,17 +10,17 @@ import com.yudiz.demo.R
 import com.yudiz.demo.databinding.ActivityBroadCastReceiverBinding
 
 class BroadCastReceiverActivity : AppCompatActivity() {
-    lateinit var usbReceiver:UsbReceiver
-    lateinit var textReceiver:TextReceiver
-    lateinit var networkBroadcast:NetworkReceiver
-    var message:String="text message"
+    lateinit var usbReceiver: UsbReceiver
+    lateinit var textReceiver: TextReceiver
+    lateinit var networkBroadcast: NetworkReceiver
+    var message: String = "text message"
     override fun onCreate(savedInstanceState: Bundle?) {
-        val binding=ActivityBroadCastReceiverBinding.inflate(layoutInflater)
+        val binding = ActivityBroadCastReceiverBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        usbReceiver= UsbReceiver()
-        textReceiver= TextReceiver()
-        networkBroadcast=NetworkReceiver()
+        usbReceiver = UsbReceiver()
+        textReceiver = TextReceiver()
+        networkBroadcast = NetworkReceiver()
         binding.btnSendBroadcast.setOnClickListener {
             Intent().also { intent ->
                 intent.action = "text message"

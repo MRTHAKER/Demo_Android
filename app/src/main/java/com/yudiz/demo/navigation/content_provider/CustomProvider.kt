@@ -7,12 +7,12 @@ import android.content.UriMatcher
 import android.database.Cursor
 import android.net.Uri
 
-class CustomProvider: ContentProvider() {
-    lateinit var  uriMatcher:UriMatcher
-    lateinit var db:MyHelper
-    var matchCode=2
-    val table="EMPLOYEE"
-    var authority="com.yudiz.demo.navigation.content_provider"
+class CustomProvider : ContentProvider() {
+    lateinit var uriMatcher: UriMatcher
+    lateinit var db: MyHelper
+    var matchCode = 2
+    val table = "EMPLOYEE"
+    var authority = "com.yudiz.demo.navigation.content_provider"
     val uri = "content://$authority/$table"
     val CONTENT_URI = Uri.parse(uri)
 
@@ -20,7 +20,7 @@ class CustomProvider: ContentProvider() {
         uriMatcher = UriMatcher(UriMatcher.NO_MATCH).apply {
             addURI(authority, "EMPLOYEE", matchCode)
         }
-        db=MyHelper(context,table)
+        db = MyHelper(context, table)
 
         return true
     }

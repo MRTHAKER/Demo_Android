@@ -17,9 +17,8 @@ class ContentProviderActivity : AppCompatActivity() {
         var contentUri: Uri = Uri.parse("content://${authority}")
         binding.btnGetContent.setOnClickListener {
             val cursor = contentResolver.query(contentUri, null, null, null, null, null)
-            contentResolver.insert(contentUri,null)
             cursor?.moveToFirst()
-            val sb = StringBuilder("lol")
+            val sb = StringBuilder()
             while (cursor?.moveToNext() == true) {
                 sb.append(cursor.getString(cursor.getColumnIndex("ID")))
                 sb.append(cursor.getString(cursor.getColumnIndex("NAME")))
@@ -28,4 +27,4 @@ class ContentProviderActivity : AppCompatActivity() {
         }
     }
 
-    }
+}
