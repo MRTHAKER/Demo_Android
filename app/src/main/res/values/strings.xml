@@ -137,4 +137,20 @@ Adipiscing elit pellentesque habitant morbi tristique. Cursus sit amet dictum si
     <string name="nav_topics_broadcast_receiver">BROADCAST RECEIVER</string>
     <string name="broadcast_hint">Enter your Broadcast text</string>
     <string name="send_broadcast">Send Broadcast</string>
+    <string name="intent_service">Intent service</string>
+    <string name="background_service">Background Service</string>
+    <string name="foreground_service">Foreground Service</string>
+    <string name="music_player">Music Player</string>
+    <string name="nav_topics_service">services</string>
+    <string name="start">start</string>
+    <string name="stop">stop</string>
+    <string name="default_timer">0:00:00</string>
+    <string name="pause">pause</string>
+    <string name="handler">handler</string>
+    <string name="seconds">seconds</string>
+    <string name="hours">hours</string>
+    <string name="minutes">minutes</string>
+    <string name="secs">secs</string>
+    <string name="default_watch_format">%d:%02d:%02d</string>
+    <string name="message">message</string>
 </resources>

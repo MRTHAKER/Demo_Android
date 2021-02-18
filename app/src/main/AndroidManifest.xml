@@ -8,7 +8,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,6 +17,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Demo">
+
+
+        <activity android:name=".navigation.services.BackgroundActivity" />
+        <activity android:name=".navigation.services.ServicesActivity" />
         <activity android:name=".navigation.broadcast_receiver.BroadCastReceiverActivity" />
         <activity android:name=".navigation.contact_provider.ContactProviderActivity" />
         <activity android:name=".navigation.content_provider.ContentProviderActivity" />
@@ -83,17 +88,19 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name=".navigation.services.BackgroundService"/>
 
-            <provider
-                android:name="com.yudiz.demo.navigation.content_provider.CustomProvider"
-                android:authorities="com.yudiz.demo.navigation.content_provider"
-                android:enabled="true"
-                android:exported="true"
-                android:grantUriPermissions="true"
-                android:multiprocess="true" />
-
+        <provider
+            android:name=".navigation.content_provider.CustomProvider"
+            android:authorities="com.yudiz.demo.navigation.content_provider"
+            android:enabled="true"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            android:multiprocess="true" />
     </application>
+
 </manifest>

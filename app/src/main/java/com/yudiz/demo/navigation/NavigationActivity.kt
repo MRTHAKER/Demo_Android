@@ -15,6 +15,7 @@ import com.yudiz.demo.navigation.fragments_demo.FragmentsMainActivity
 import com.yudiz.demo.navigation.fragments_demo.ViewPagerNavigationActivity
 import com.yudiz.demo.navigation.notifications.NotificationsActivity
 import com.yudiz.demo.navigation.permissions.PermissionsActivity
+import com.yudiz.demo.navigation.services.ServicesActivity
 
 class NavigationActivity : AppCompatActivity() {
     lateinit var binding: ActivityNavigationBinding
@@ -89,7 +90,22 @@ class NavigationActivity : AppCompatActivity() {
                 )
             )
         }
-        binding.navTopicsBroadcastReceiver.setOnClickListener { startActivity(Intent(this,BroadCastReceiverActivity::class.java)) }
+        binding.navTopicsBroadcastReceiver.setOnClickListener {
+            startActivity(
+                Intent(
+                    this,
+                    BroadCastReceiverActivity::class.java
+                )
+            )
+        }
+        binding.navTopicsServices.setOnClickListener {
+            startActivity(
+                Intent(
+                    this,
+                    ServicesActivity::class.java
+                )
+            )
+        }
 
     }
 }
