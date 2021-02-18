@@ -37,21 +37,23 @@ class ContactProviderActivity : AppCompatActivity() {
             )?.also { nameCursor = it }
             val contactList = ArrayList<ContactModel>()
             nameCursor.moveToFirst()
-            var id :String
+            var id: String
             lateinit var emailCursor: Cursor
-            var email=""
+            var email = ""
             nameCursor.moveToFirst()
             while (nameCursor.moveToNext()) {
-                            id = nameCursor.getString(nameCursor.getColumnIndex(ContactsContract.CommonDataKinds.Contactables.CONTACT_ID))
-                            contentResolver.query(
-                            ContactsContract.CommonDataKinds.Email.CONTENT_URI, null,
+                id =
+                    nameCursor.getString(nameCursor.getColumnIndex(ContactsContract.CommonDataKinds.Contactables.CONTACT_ID))
+                contentResolver.query(
+                    ContactsContract.CommonDataKinds.Email.CONTENT_URI, null,
                     ContactsContract.CommonDataKinds.Email.CONTACT_ID + " = $id ", null, null
                 )?.also { emailCursor = it }
-                if(emailCursor.moveToFirst()){
-                    email=emailCursor.getString(emailCursor.getColumnIndex(ContactsContract.CommonDataKinds.Email.DATA))
+                if (emailCursor.moveToFirst()) {
+                    email =
+                        emailCursor.getString(emailCursor.getColumnIndex(ContactsContract.CommonDataKinds.Email.DATA))
                     emailCursor.close()
-                }else{
-                    email="No Email Id is Assigned to this Contact"
+                } else {
+                    email = "No Email Id is Assigned to this Contact"
                 }
                 contactList.add(
                     ContactModel(
@@ -73,39 +75,6 @@ class ContactProviderActivity : AppCompatActivity() {
                 ), contactCode
             )
         }
-    }
-
-    class getContacts(
-        val name: Cursor,
-        val binding: ActivityContactProviderBinding,
-        private val context: Context
-    ) : AsyncTask<Any, Any, Any>() {
-        override fun onPreExecute() {
-            super.onPreExecute()
-        }
-
-        override fun doInBackground(vararg params: Any?): Any {
-            val id = name.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME)
-            val contactList = ArrayList<ContactModel>()
-            while (name.moveToNext()) {
-                contactList.add(
-                    ContactModel(
-                        name.getString(name.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME)),
-                        "ok"
-                    )
-                )
-            }
-            name.close()
-            binding.contactsRv.adapter = RecyclerContactsAdapter(contactList)
-            binding.contactsRv.layoutManager = LinearLayoutManager(context)
-            return 0
-        }
-
-        override fun onPostExecute(result: Any?) {
-            super.onPostExecute(result)
-
-        }
-
     }
 
     private fun checkSelf(permission: String): Boolean {
