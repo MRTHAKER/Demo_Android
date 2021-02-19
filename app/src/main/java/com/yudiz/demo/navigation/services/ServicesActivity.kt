@@ -28,6 +28,7 @@ class ServicesActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, ForegroundActivity::class.java))
             }
             binding.btnIntentService -> {
+                startActivity(Intent(this, IntentServiceActivity::class.java))
             }
             binding.btnMusicPlayer -> {
                 startActivity(Intent(this, MediaPlayerActivity::class.java))

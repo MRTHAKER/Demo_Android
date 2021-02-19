@@ -16,6 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/iv_media_play"
+        android:src="@drawable/ic_play"
         android:layout_margin="@dimen/_5sdp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,6 +25,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="@id/iv_media_play"
         android:id="@+id/iv_media_pause"
+        android:src="@drawable/ic_pause"
         android:layout_margin="@dimen/_5sdp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,6 +33,7 @@
     <ImageView
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="@id/iv_media_pause"
+        android:src="@drawable/ic_stop"
         android:id="@+id/iv_media_stop"
         android:layout_margin="@dimen/_5sdp"
         android:layout_width="wrap_content"

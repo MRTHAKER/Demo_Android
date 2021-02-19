@@ -142,7 +142,7 @@ Adipiscing elit pellentesque habitant morbi tristique. Cursus sit amet dictum si
     <string name="intent_service">Intent service</string>
     <string name="background_service">Background Service</string>
     <string name="foreground_service">Foreground Service</string>
-    <string name="music_player">Music Player</string>
+    <string name="music_player">Music</string>
     <string name="nav_topics_service">services</string>
     <string name="start">start</string>
     <string name="stop">stop</string>
@@ -156,5 +156,10 @@ Adipiscing elit pellentesque habitant morbi tristique. Cursus sit amet dictum si
     <string name="default_watch_format">%d:%02d:%02d</string>
     <string name="message">message</string>
     <string name="read_storage_granted">read storage permission granted</string>
+    <string name="play">play</string>
+    <string name="stopMedia">MEDIA.STOP</string>
+    <string name="pauseMedia">MEDIA.PAUSE</string>
+    <string name="playMedia">MEDIA.PLAY</string>
+    <string name="compress">compress</string>
 
 </resources>

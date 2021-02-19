@@ -1,13 +1,12 @@
 package com.yudiz.demo.navigation.notifications
 
-import android.app.NotificationManager
-import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.yudiz.demo.R
 import com.yudiz.demo.navigation.services.ForegroundService
+import com.yudiz.demo.navigation.services.MediaPlayerService
 
 class ShowNotificationsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +15,12 @@ class ShowNotificationsActivity : AppCompatActivity() {
         if (intent.action.equals(getString(R.string.stop))){
             stopService(Intent(applicationContext,ForegroundService::class.java))
             finish()
-        }else {
+        }
+        else if(intent.action.equals(getString(R.string.stopMedia))){
+            stopService(Intent(applicationContext,MediaPlayerService::class.java).apply { action=getString(R.string.stopMedia) })
+            finish()
+        }
+        else {
             Toast.makeText(this, "You have been notified!", Toast.LENGTH_SHORT).show()
         }
     }

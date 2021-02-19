@@ -2,14 +2,15 @@ package com.yudiz.demo.navigation.services
 
 import android.Manifest
 import android.annotation.SuppressLint
-import android.content.ContentUris
-import android.content.Intent
+import android.content.*
 import android.content.pm.PackageManager
 import android.database.Cursor
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.provider.MediaStore
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
@@ -20,12 +21,29 @@ import com.yudiz.demo.R
 import com.yudiz.demo.databinding.ActivityMediaPlayerBinding
 import com.yudiz.demo.navigation.services.models.SongModel
 
-class MediaPlayerActivity : AppCompatActivity(), ItemClickListener {
+class MediaPlayerActivity : AppCompatActivity(), ItemClickListener{
     val storageCode = 1
     private lateinit var mediaCursor: Cursor
     lateinit var serviceIntent: Intent
     lateinit var songList: MutableList<SongModel>
     lateinit var adapter: RecyclerMediaAdapter
+    lateinit var holder: RecyclerMediaAdapter.RecyclerViewMediaHolder
+
+    override fun onStart() {
+        super.onStart()
+
+        registerReceiver(receiver,IntentFilter().apply {
+            addAction(getString(R.string.playMedia))
+            addAction(getString(R.string.pauseMedia))
+            addAction(getString(R.string.stopMedia))
+        })
+    }
+
+    override fun onStop() {
+        super.onStop()
+        unregisterReceiver(receiver)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMediaPlayerBinding.inflate(layoutInflater)
@@ -94,28 +112,49 @@ class MediaPlayerActivity : AppCompatActivity(), ItemClickListener {
                     mediaCursor.getString(mediaCursor.getColumnIndex(MediaStore.Audio.Media.DISPLAY_NAME))
                 val path =
                     ContentUris.withAppendedId(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, id)
-                songList.add(SongModel(name, path, getDrawable(R.drawable.ic_play)!!, getDrawable(R.drawable.ic_pause)!!,getDrawable(R.drawable.ic_stop)!!))
+                songList.add(SongModel(name, path))
             } while (mediaCursor.moveToNext())
             mediaCursor.close()
         }
     }
 
-    @SuppressLint("UseCompatLoadingForDrawables")
-    override fun onClick(view: View, position: Int,song:Uri) {
-        when(view.id){
-            R.id.iv_media_play->{
-                serviceIntent.action="play"
-                serviceIntent.putExtra("uri",song)
+    override fun onClick(view: View, holder: RecyclerMediaAdapter.RecyclerViewMediaHolder, song: Uri, songName: String) {
+        when (view.id) {
+            R.id.iv_media_play -> {
+                view.visibility = View.GONE
+                serviceIntent.action = "play"
+                serviceIntent.putExtra("song", songName)
+                serviceIntent.putExtra("uri", song)
+                this.holder=holder
                 startService(serviceIntent)
             }
-            R.id.iv_media_pause->{
-                serviceIntent.action="pause"
+            R.id.iv_media_pause -> {
+                view.visibility = View.GONE
+                serviceIntent.action = "pause"
+                this.holder=holder
                 startService(serviceIntent)
             }
-            R.id.iv_media_stop->{
-                serviceIntent.action="stop"
+            R.id.iv_media_stop -> {
+                serviceIntent.action = "stop"
+                this.holder=holder
                 stopService(serviceIntent)
             }
         }
+    }
+    val receiver= object :BroadcastReceiver(){
+        override fun onReceive(context: Context?, intent: Intent?) {
+            when (intent?.action){
+                context?.getString(R.string.playMedia)->{
+                    holder.play.callOnClick()
+                }
+                context?.getString(R.string.pauseMedia)->{
+                    holder.pause.callOnClick()
+                }
+                context?.getString(R.string.stopMedia)->{
+                    holder.stop.callOnClick()
+                }
+            }
+        }
+
     }
 }

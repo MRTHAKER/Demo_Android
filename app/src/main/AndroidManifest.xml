@@ -10,7 +10,7 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -19,10 +19,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Demo">
+        <service
+            android:name=".navigation.services.MyIntentService"
+            android:exported="false"></service>
+
+        <activity android:name=".navigation.services.IntentServiceActivity" />
         <activity android:name=".navigation.services.MediaPlayerActivity" />
-        <service android:name=".navigation.services.BackgroundService"/>
-        <service android:name=".navigation.services.ForegroundService" />
-        <service android:name=".navigation.services.MediaPlayerService"/>
+
+        <service android:name=".navigation.services.BackgroundService" />
+        <service
+            android:name=".navigation.services.ForegroundService"
+            android:foregroundServiceType="mediaPlayback" />
+        <service android:name=".navigation.services.MediaPlayerService" />
+
         <activity android:name=".navigation.services.ForegroundActivity" />
         <activity android:name=".navigation.services.BackgroundActivity" />
         <activity android:name=".navigation.services.ServicesActivity" />
@@ -39,14 +48,18 @@
         <activity android:name=".navigation.intent_filter.FilterImageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
         <activity android:name=".navigation.intent_filter.FilterTextActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
@@ -89,9 +102,11 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <provider
             android:name=".navigation.content_provider.CustomProvider"
             android:authorities="com.yudiz.demo.navigation.content_provider"
