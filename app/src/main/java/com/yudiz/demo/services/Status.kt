@@ -1,4 +1,4 @@
-package com.yudiz.demo.navigation.services
+package com.yudiz.demo.services
 
 enum class Status(val currentStatus: Int) {
     RUNNING(1),

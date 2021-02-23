@@ -1,4 +1,4 @@
-package com.yudiz.demo.navigation.services
+package com.yudiz.demo.services
 
 import android.net.Uri
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.textview.MaterialTextView
 import com.yudiz.demo.R
 import com.yudiz.demo.databinding.RowMediaPlayerRvBinding
-import com.yudiz.demo.navigation.services.models.SongModel
+import com.yudiz.demo.services.models.SongModel
 
 class RecyclerMediaAdapter(private val items: MutableList<SongModel>) :
     RecyclerView.Adapter<RecyclerMediaAdapter.RecyclerViewMediaHolder>() {

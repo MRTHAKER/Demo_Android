@@ -1,4 +1,4 @@
-package com.yudiz.demo.navigation.services
+package com.yudiz.demo.services
 
 import android.app.IntentService
 import android.content.BroadcastReceiver

@@ -1,13 +1,11 @@
-package com.yudiz.demo.navigation.services
+package com.yudiz.demo.services
 
 import android.content.Intent
-import android.graphics.drawable.BitmapDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
 import androidx.core.graphics.drawable.toBitmap
-import com.yudiz.demo.R
 import com.yudiz.demo.databinding.ActivityIntentServiceBinding
 
 class IntentServiceActivity : AppCompatActivity(), CustomResultReceiver.AppReceiver {

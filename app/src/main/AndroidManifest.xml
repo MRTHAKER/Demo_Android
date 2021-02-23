@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yudiz.demo">
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -19,22 +20,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Demo">
-        <service
-            android:name=".navigation.services.MyIntentService"
-            android:exported="false"></service>
+        <activity android:name=".saving_multimedia.multithreading.CoroutineActivity"></activity>
+        <activity android:name=".saving_multimedia.multithreading.AsyncActivity" />
+        <activity android:name=".saving_multimedia.multithreading.ThreadingOperationActivity" />
+        <activity android:name=".saving_multimedia.multithreading.ThreadingSumActivity" />
+        <activity android:name=".saving_multimedia.SavingMultimediaActivity" />
 
-        <activity android:name=".navigation.services.IntentServiceActivity" />
-        <activity android:name=".navigation.services.MediaPlayerActivity" />
-
-        <service android:name=".navigation.services.BackgroundService" />
         <service
-            android:name=".navigation.services.ForegroundService"
+            android:name=".services.MyIntentService"
+            android:exported="false" />
+
+        <activity android:name=".services.IntentServiceActivity" />
+        <activity android:name=".services.MediaPlayerActivity" />
+
+        <service android:name=".services.BackgroundService" />
+        <service
+            android:name=".services.ForegroundService"
             android:foregroundServiceType="mediaPlayback" />
-        <service android:name=".navigation.services.MediaPlayerService" />
+        <service android:name=".services.MediaPlayerService" />
 
-        <activity android:name=".navigation.services.ForegroundActivity" />
-        <activity android:name=".navigation.services.BackgroundActivity" />
-        <activity android:name=".navigation.services.ServicesActivity" />
+        <activity android:name=".services.ForegroundActivity" />
+        <activity android:name=".services.BackgroundActivity" />
+        <activity android:name=".services.ServicesActivity" />
         <activity android:name=".navigation.broadcast_receiver.BroadCastReceiverActivity" />
         <activity android:name=".navigation.contact_provider.ContactProviderActivity" />
         <activity android:name=".navigation.content_provider.ContentProviderActivity" />

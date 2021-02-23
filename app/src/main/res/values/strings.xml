@@ -161,5 +161,14 @@ Adipiscing elit pellentesque habitant morbi tristique. Cursus sit amet dictum si
     <string name="pauseMedia">MEDIA.PAUSE</string>
     <string name="playMedia">MEDIA.PLAY</string>
     <string name="compress">compress</string>
+    <string name="Saving_data_Multimedia"><![CDATA[Saving data & Multimedia]]></string>
+    <string name="saving_data_multimedia_multi_threading">Multi Threading</string>
+    <string name="multi_threading">Multi Threading</string>
+    <string name="enter_first_number">Enter your number</string>
+    <string name="enter_first_two">Enter your number</string>
+    <string name="sum">sum</string>
+    <string name="saving_data_multimedia_factorial">factorial multiple Threads</string>
+    <string name="saving_data_multimedia_async">async task</string>
+    <string name="saving_data_multimedia_coroutine">coroutine</string>
 
 </resources>

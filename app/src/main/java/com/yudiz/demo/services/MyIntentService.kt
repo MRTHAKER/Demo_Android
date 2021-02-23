@@ -1,15 +1,11 @@
-package com.yudiz.demo.navigation.services
+package com.yudiz.demo.services
 
 import android.app.IntentService
 import android.content.Intent
-import android.content.Context
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.os.ResultReceiver
 import com.yudiz.demo.R
-import java.io.FileOutputStream
-import java.io.OutputStream
 
 class MyIntentService : IntentService("MyIntentService") {
     var resultReceiver: ResultReceiver? = null

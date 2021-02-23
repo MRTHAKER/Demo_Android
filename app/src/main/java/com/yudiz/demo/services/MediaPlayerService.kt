@@ -1,21 +1,16 @@
-package com.yudiz.demo.navigation.services
+package com.yudiz.demo.services
 
 import android.app.*
-import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.media.AudioAttributes
 import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Build
-import android.os.Bundle
 import android.os.IBinder
-import android.os.ResultReceiver
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import com.yudiz.demo.R
-import com.yudiz.demo.navigation.notifications.ShowNotificationsActivity
-import java.text.FieldPosition
 import java.util.*
 
 class MediaPlayerService : Service(), MediaPlayer.OnPreparedListener,

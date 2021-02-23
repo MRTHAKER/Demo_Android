@@ -1,6 +1,5 @@
 package com.yudiz.demo.navigation
 
-import android.content.BroadcastReceiver
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,7 +14,7 @@ import com.yudiz.demo.navigation.fragments_demo.FragmentsMainActivity
 import com.yudiz.demo.navigation.fragments_demo.ViewPagerNavigationActivity
 import com.yudiz.demo.navigation.notifications.NotificationsActivity
 import com.yudiz.demo.navigation.permissions.PermissionsActivity
-import com.yudiz.demo.navigation.services.ServicesActivity
+import com.yudiz.demo.services.ServicesActivity
 
 class NavigationActivity : AppCompatActivity() {
     lateinit var binding: ActivityNavigationBinding
@@ -98,14 +97,5 @@ class NavigationActivity : AppCompatActivity() {
                 )
             )
         }
-        binding.navTopicsServices.setOnClickListener {
-            startActivity(
-                Intent(
-                    this,
-                    ServicesActivity::class.java
-                )
-            )
-        }
-
     }
 }

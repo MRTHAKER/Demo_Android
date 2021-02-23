@@ -2,54 +2,46 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".saving_multimedia.SavingMultimediaActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="10dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/android_topics"
+        android:text="@string/Saving_data_Multimedia"
         android:textColor="@color/black" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_ui"
+        android:id="@+id/saving_data_multimedia_multithreading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="@string/ui" />
+        android:text="@string/saving_data_multimedia_multi_threading" />
+
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_layout"
+        android:id="@+id/saving_data_multimedia_multithreading_factorial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="@string/ui_topics_layout" />
+        android:text="@string/saving_data_multimedia_factorial" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_navigation"
+        android:id="@+id/saving_data_multimedia_multithreading_async"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="@string/navigation" />
+        android:text="@string/saving_data_multimedia_async" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_services"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="@string/nav_topics_service" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_saving"
+        android:id="@+id/saving_data_multimedia_multithreading_coroutine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="@string/Saving_data_Multimedia" />
+        android:text="@string/saving_data_multimedia_coroutine" />
 
 </LinearLayout>

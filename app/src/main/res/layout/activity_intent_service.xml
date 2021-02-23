@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".navigation.services.IntentServiceActivity">
+    tools:context=".services.IntentServiceActivity">
 <ImageView
     android:id="@+id/iv_uncompressed"
     android:layout_width="wrap_content"

@@ -1,4 +1,4 @@
-package com.yudiz.demo.navigation.services
+package com.yudiz.demo.services
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,7 +8,6 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.yudiz.demo.R
 import com.yudiz.demo.databinding.ActivityBackgroundBinding
-import kotlin.properties.Delegates
 
 class BackgroundActivity : AppCompatActivity(), View.OnClickListener,
     CustomResultReceiver.AppReceiver {

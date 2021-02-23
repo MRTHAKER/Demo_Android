@@ -1,10 +1,9 @@
-package com.yudiz.demo.navigation.services
+package com.yudiz.demo.services
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.yudiz.demo.R
 import com.yudiz.demo.databinding.ActivityServicesBinding
 
 class ServicesActivity : AppCompatActivity(), View.OnClickListener {

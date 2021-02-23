@@ -1,4 +1,4 @@
-package com.yudiz.demo.navigation.services
+package com.yudiz.demo.services
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -8,18 +8,15 @@ import android.database.Cursor
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.provider.MediaStore
-import android.util.Log
 import android.view.View
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.yudiz.demo.R
 import com.yudiz.demo.databinding.ActivityMediaPlayerBinding
-import com.yudiz.demo.navigation.services.models.SongModel
+import com.yudiz.demo.services.models.SongModel
 
 class MediaPlayerActivity : AppCompatActivity(), ItemClickListener{
     val storageCode = 1

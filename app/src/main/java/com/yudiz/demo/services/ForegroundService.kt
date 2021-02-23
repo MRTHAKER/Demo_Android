@@ -1,15 +1,13 @@
-package com.yudiz.demo.navigation.services
+package com.yudiz.demo.services
 
 import android.app.*
 import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.IBinder
-import android.os.ResultReceiver
 import android.util.Log
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
 import com.yudiz.demo.R
 import com.yudiz.demo.navigation.notifications.ShowNotificationsActivity
 import java.util.*

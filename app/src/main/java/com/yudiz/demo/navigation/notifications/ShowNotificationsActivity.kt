@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.yudiz.demo.R
-import com.yudiz.demo.navigation.services.ForegroundService
-import com.yudiz.demo.navigation.services.MediaPlayerService
+import com.yudiz.demo.services.ForegroundService
+import com.yudiz.demo.services.MediaPlayerService
 
 class ShowNotificationsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
