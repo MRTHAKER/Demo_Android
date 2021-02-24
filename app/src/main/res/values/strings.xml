@@ -170,5 +170,8 @@ Adipiscing elit pellentesque habitant morbi tristique. Cursus sit amet dictum si
     <string name="saving_data_multimedia_factorial">factorial multiple Threads</string>
     <string name="saving_data_multimedia_async">async task</string>
     <string name="saving_data_multimedia_coroutine">coroutine</string>
+    <string name="saving_data_saving_file">Saving File</string>
+    <string name="save">Save</string>
+    <string name="save_amp_share"><![CDATA[save & share]]></string>
 
 </resources>

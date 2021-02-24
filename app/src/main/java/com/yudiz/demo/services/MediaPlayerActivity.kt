@@ -97,7 +97,6 @@ class MediaPlayerActivity : AppCompatActivity(), ItemClickListener{
         }
     }
 
-    @SuppressLint("UseCompatLoadingForDrawables")
     fun getAudioFiles() {
         contentResolver.query(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, null, null, null, null)
             ?.also { mediaCursor = it }

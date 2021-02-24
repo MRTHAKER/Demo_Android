@@ -8,6 +8,7 @@ import com.yudiz.demo.saving_multimedia.multithreading.AsyncActivity
 import com.yudiz.demo.saving_multimedia.multithreading.CoroutineActivity
 import com.yudiz.demo.saving_multimedia.multithreading.ThreadingOperationActivity
 import com.yudiz.demo.saving_multimedia.multithreading.ThreadingSumActivity
+import com.yudiz.demo.saving_multimedia.saving.SavingFileActivity
 
 class SavingMultimediaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +39,14 @@ class SavingMultimediaActivity : AppCompatActivity() {
         binding.savingDataMultimediaMultithreadingCoroutine.setOnClickListener {
             startActivity(
                 Intent(this, CoroutineActivity::class.java)
+            )
+        }
+        binding.savingDataMultimediaSavingFile.setOnClickListener {
+            startActivity(
+                Intent(
+                    this,
+                    SavingFileActivity::class.java
+                )
             )
         }
     }

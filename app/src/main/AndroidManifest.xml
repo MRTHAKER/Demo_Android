@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.write"/>
 
     <application
         android:allowBackup="true"
@@ -20,7 +20,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Demo">
-        <activity android:name=".saving_multimedia.multithreading.CoroutineActivity"></activity>
+        <activity android:name=".saving_multimedia.saving.SavingFileActivity"/>
+        <activity android:name=".saving_multimedia.multithreading.CoroutineActivity" />
         <activity android:name=".saving_multimedia.multithreading.AsyncActivity" />
         <activity android:name=".saving_multimedia.multithreading.ThreadingOperationActivity" />
         <activity android:name=".saving_multimedia.multithreading.ThreadingSumActivity" />

@@ -44,4 +44,11 @@
         android:layout_margin="10dp"
         android:text="@string/saving_data_multimedia_coroutine" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saving_data_multimedia_saving_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/saving_data_saving_file" />
+
 </LinearLayout>
